@@ -231,7 +231,7 @@ function renderSlide() {
             html = `
                 <h2>${slideData.title}</h2>
                 <div class="accent-box" style="font-size: 1.2rem; line-height: 1.8;">
-                    ${slideData.content}
+                    ${slideData.content.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')}
                 </div>
                 <div style="font-size: 4rem">🚀</div>
             `;
@@ -254,10 +254,11 @@ function renderSlide() {
 
         case 'quiz':
         case 'scenario':
+            const gridStyle = slideData.options.length === 3 ? 'grid-template-columns: 1fr; max-width: 500px;' : '';
             html = `
                 <h2>${slideData.title}</h2>
                 <p style="font-weight: 600">${slideData.question || slideData.scenario}</p>
-                <div class="options-grid">
+                <div class="options-grid" style="${gridStyle}">
                     ${slideData.options.map(opt => `
                         <button class="option-btn" onclick="checkAnswer(${opt.correct}, '${opt.feedback.replace(/'/g, "\\'")}')">
                             ${opt.text}
