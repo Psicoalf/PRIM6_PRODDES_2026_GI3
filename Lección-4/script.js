@@ -159,7 +159,7 @@ function renderSlide() {
     updateNav();
 
     const slideData = slides[currentSlideIndex];
-    
+
     // Header update
     document.getElementById('lesson-topic').innerText = slideData.title;
 
@@ -177,7 +177,7 @@ function renderSlide() {
 
     let html = '';
 
-    switch(slideData.type) {
+    switch (slideData.type) {
         case 'cover':
             html = `
                 <div class="badge">${slideData.subtitle}</div>
@@ -187,7 +187,7 @@ function renderSlide() {
                 <div class="accent-box" style="text-align: center">${slideData.content}</div>
             `;
             break;
-        
+
         case 'list':
             html = `
                 <h2>${slideData.title}</h2>
@@ -227,7 +227,7 @@ function renderSlide() {
             html = `
                 <h2>${slideData.title}</h2>
                 <div class="accent-box" style="font-size: 1.2rem; line-height: 1.8;">
-                    ${slideData.content}
+                    ${slideData.content.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')}
                 </div>
                 <div style="font-size: 4rem">🤖</div>
             `;
@@ -250,10 +250,11 @@ function renderSlide() {
 
         case 'quiz':
         case 'scenario':
+            const gridStyle = slideData.options.length === 3 ? 'grid-template-columns: 1fr; max-width: 500px;' : '';
             html = `
                 <h2>${slideData.title}</h2>
                 <p style="font-weight: 600">${slideData.question || slideData.scenario}</p>
-                <div class="options-grid">
+                <div class="options-grid" style="${gridStyle}">
                     ${slideData.options.map(opt => `
                         <button class="option-btn" onclick="checkAnswer(${opt.correct}, '${opt.feedback.replace(/'/g, "\\'")}')">
                             ${opt.text}
@@ -301,7 +302,7 @@ function renderSlide() {
 
     slideEl.innerHTML = html;
     slideContainer.appendChild(slideEl);
-    
+
     setTimeout(() => {
         slideEl.classList.add('active');
         setTimeout(() => {
@@ -318,7 +319,7 @@ function updateNav() {
     nextBtn.disabled = currentSlideIndex === slides.length - 1 || isTransitioning;
 }
 
-window.checkAnswer = function(isCorrect, feedback) {
+window.checkAnswer = function (isCorrect, feedback) {
     if (isTransitioning) return;
     if (isCorrect) {
         showFeedback('¡Correcto!', feedback, 'Continuar');
@@ -328,11 +329,11 @@ window.checkAnswer = function(isCorrect, feedback) {
 };
 
 let currentSortOrder = [];
-window.handleSort = function(id) {
+window.handleSort = function (id) {
     if (isTransitioning) return;
     const slideData = slides[currentSlideIndex];
     if (currentSortOrder.includes(id)) return;
-    
+
     currentSortOrder.push(id);
     const btn = document.querySelector(`.step-btn[data-id="${id}"]`);
     btn.style.opacity = '0.5';
@@ -349,23 +350,23 @@ window.handleSort = function(id) {
     }
 };
 
-window.resetSort = function() {
+window.resetSort = function () {
     currentSortOrder = [];
     renderSlide();
 };
 
-window.showFeedback = function(title, text, btnText) {
+window.showFeedback = function (title, text, btnText) {
     document.getElementById('feedback-title').innerText = title;
     document.getElementById('feedback-text').innerText = text;
     document.getElementById('feedback-btn').innerText = btnText;
-    
+
     const icon = document.getElementById('feedback-icon');
     if (title.includes('Correcto') || title.includes('Bien')) {
         icon.innerHTML = '<div style="font-size: 4rem">🌟</div>';
     } else {
         icon.innerHTML = '<div style="font-size: 4rem">🤔</div>';
     }
-    
+
     feedbackOverlay.classList.remove('hidden');
 };
 
@@ -373,7 +374,7 @@ function hideFeedback() {
     if (isTransitioning) return;
     const btnText = document.getElementById('feedback-btn').innerText;
     feedbackOverlay.classList.add('hidden');
-    
+
     if (btnText === 'Continuar') {
         if (currentSlideIndex < slides.length - 1) {
             currentSlideIndex++;
