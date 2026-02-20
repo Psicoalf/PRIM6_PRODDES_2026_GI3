@@ -130,12 +130,14 @@ const progressBar = document.getElementById('progress-bar');
 const feedbackOverlay = document.getElementById('feedback-overlay');
 const feedbackCard = document.getElementById('feedback-card');
 
+let isTransitioning = false;
+
 function init() {
     renderSlide();
     updateNav();
 
     prevBtn.addEventListener('click', () => {
-        if (currentSlideIndex > 0) {
+        if (currentSlideIndex > 0 && !isTransitioning) {
             currentSlideIndex--;
             renderSlide();
             updateNav();
@@ -143,7 +145,7 @@ function init() {
     });
 
     nextBtn.addEventListener('click', () => {
-        if (currentSlideIndex < slides.length - 1) {
+        if (currentSlideIndex < slides.length - 1 && !isTransitioning) {
             currentSlideIndex++;
             renderSlide();
             updateNav();
@@ -154,6 +156,10 @@ function init() {
 }
 
 function renderSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    updateNav(); // Disable buttons immediately
+
     const slideData = slides[currentSlideIndex];
 
     // Add transition effect
@@ -161,7 +167,9 @@ function renderSlide() {
     if (oldSlide) {
         oldSlide.classList.remove('active');
         oldSlide.classList.add('exit');
-        setTimeout(() => oldSlide.remove(), 500);
+        setTimeout(() => {
+            oldSlide.remove();
+        }, 500);
     }
 
     const slideEl = document.createElement('div');
@@ -299,15 +307,22 @@ function renderSlide() {
     slideContainer.appendChild(slideEl);
 
     // Trigger transition
-    setTimeout(() => slideEl.classList.add('active'), 50);
+    setTimeout(() => {
+        slideEl.classList.add('active');
+        // Reset flag after animation duration (500ms)
+        setTimeout(() => {
+            isTransitioning = false;
+            updateNav(); // Re-enable buttons
+        }, 500);
+    }, 50);
 
     // Update progress
     progressBar.style.width = `${((currentSlideIndex + 1) / slides.length) * 100}%`;
 }
 
 function updateNav() {
-    prevBtn.disabled = currentSlideIndex === 0;
-    // nextBtn.disabled = currentSlideIndex === slides.length - 1; // Always allow next for presentation
+    prevBtn.disabled = currentSlideIndex === 0 || isTransitioning;
+    nextBtn.disabled = currentSlideIndex === slides.length - 1 || isTransitioning;
 }
 
 window.checkAnswer = function (isCorrect, feedback) {
@@ -362,6 +377,7 @@ window.showFeedback = function (title, text, btnText) {
 };
 
 function hideFeedback() {
+    if (isTransitioning) return;
     const btnText = document.getElementById('feedback-btn').innerText;
     feedbackOverlay.classList.add('hidden');
 
