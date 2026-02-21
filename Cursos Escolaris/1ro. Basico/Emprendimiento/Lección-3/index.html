@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: Productividad - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Emprendimiento para la productividad</p>
+                    <h1>PRODUCTIVIDAD</h1>
+                    <p class="lesson-info">Lección 3 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Reloj de productividad -->
+                            <circle cx="110" cy="100" r="80" fill="#244b5a" />
+                            <circle cx="110" cy="100" r="70" fill="#ffffff" />
+                            <path d="M110 40V100L150 120" stroke="#db6015" stroke-width="8" stroke-linecap="round" />
+                            <circle cx="110" cy="100" r="10" fill="#244b5a" />
+                            <!-- Engranaje -->
+                            <path d="M180 150L190 140M190 160L180 170" stroke="#f7be00" stroke-width="10"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy descubriremos cómo hacer más con menos y ser emprendedores
+                        exitosos. 🚀</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Definir el concepto de productividad en el emprendimiento.</li>
+                        <li>Identificar la diferencia entre eficiencia y eficacia.</li>
+                        <li>Reconocer factores que mejoran la producción de un negocio.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Cómo usas tu tiempo?</h2>
+                    <p>Imagina dos panaderos: Uno hace 10 panes en 1 hora, el otro hace 10 panes en 5 horas...</p>
+                    <div class="interactive-grid">
+                        <div class="info-card"
+                            onclick="showFeedback('p3', '¡Exacto! El primer panadero es más productivo porque logra el mismo resultado en menos tiempo.')">
+                            <p>¿Quién crees que aprovechó mejor sus recursos y tiempo?</p>
+                        </div>
+                    </div>
+                    <div id="feedback-p3" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras Clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Palabras clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">⚙️</span>
+                            <h3>Eficacia</h3>
+                            <p>Lograr la meta o el objetivo propuesto.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">⚡</span>
+                            <h3>Eficiencia</h3>
+                            <p>Lograr la meta usando la menor cantidad de recursos.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">📈</span>
+                            <h3>Optimización</h3>
+                            <p>Mejorar un proceso para que sea más rápido o económico.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido: ¿Qué es la productividad? -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>📊 ¿Qué es la productividad?</h2>
+                    <p>No se trata de trabajar más duro, sino de <b>trabajar mejor</b>.</p>
+                    <div class="reflection-box">
+                        <p>Es la relación entre la cantidad de productos obtenidos y los recursos que utilizamos
+                            (tiempo, dinero, materiales).</p>
+                    </div>
+                    <p><b>Fórmula simple:</b> Productividad = Resultados / Recursos</p>
+                </div>
+            </section>
+
+            <!-- 6. Contenido: Eficacia vs Eficiencia -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>⚖️ Eficacia vs Eficiencia</h2>
+                    <div class="keywords-container">
+                        <div class="keyword" style="border-top-color: #244b5a;">
+                            <h3>Ser Eficaz</h3>
+                            <p>"Llegué a la meta". No importa cuánto gasté.</p>
+                        </div>
+                        <div class="keyword" style="border-top-color: #db6015;">
+                            <h3>Ser Eficiente</h3>
+                            <p>"Llegué a la meta ahorrando tiempo y dinero".</p>
+                        </div>
+                    </div>
+                    <p style="text-align:center; margin-top:20px;">¡Un emprendedor productivo busca ser <b>ambas</b>!
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🔍 Factores de Productividad</h2>
+                    <p>Haz clic en cada pieza para explorar qué ayuda a un negocio:</p>
+                    <div class="explorer-grid-9">
+                        <div class="folder-mini"
+                            onclick="showPopup('Tecnología: El uso de máquinas o software acelera el trabajo.')">
+                            Tecnología</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Capacitación: Un personal que sabe qué hacer comete menos errores.')">
+                            Capacitación</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Motivación: Trabajadores felices y con metas claras rinden más.')">
+                            Motivación</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Organización: Tener un plan evita perder el tiempo buscando qué hacer.')">
+                            Organización</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Materiales: Usar materia prima de calidad evita desperdicios.')">Calidad
+                        </div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Clima Laboral: Un ambiente de respeto ayuda a la concentración.')">
+                            Ambiente</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ Actividad de comprensión</h2>
+                    <p>Si una costurera hace 5 vestidos usando menos tela que antes, pero manteniendo la misma calidad,
+                        ¿qué logró mejorar?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(8, false, 'La eficacia solo se trata de terminar el vestido. ¡Piensa en el ahorro de tela!')">Solo
+                            Eficacia</button>
+                        <button
+                            onclick="checkAnswer(8, true, '¡Correcto! Mejoró su eficiencia al usar menos recursos (tela) para el mismo resultado.')">Sificiencia</button>
+                        <button
+                            onclick="checkAnswer(8, false, 'La impuntualidad no tiene que ver con el ahorro de materiales. ¡Intenta de nuevo!')">Impuntualidad</button>
+                        <button
+                            onclick="checkAnswer(8, false, 'El desperdicio es lo opuesto a lo que ella logró. ¡Prueba otra vez!')">Desperdicio</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 Mejora el Proceso</h2>
+                    <p>Relaciona el problema con su solución para aumentar la productividad:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="A" id="btn-a">Mucho desperdicio</button>
+                            <button class="match-btn" data-type="B" id="btn-b">Trabajo lento</button>
+                            <button class="match-btn" data-type="C" id="btn-c">Errores frecuentes</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="C" id="desc-c">Capacitar al personal</button>
+                            <button class="match-btn" data-target="A" id="desc-a">Optimizar materiales</button>
+                            <button class="match-btn" data-target="B" id="desc-b">Usar nuevas herramientas</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()" style="display:none">Intentar de
+                        nuevo</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Caso Práctico</h2>
+                    <p>Juan tiene una venta de jugos. Se dio cuenta que tarda mucho pelando naranjas a mano. Decide
+                        comprar una máquina exprimidora eléctrica.</p>
+                    <p>¿Qué factor de productividad está aplicando Juan?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(10, true, '¡Exacto! La tecnología le permite producir más jugos en menos tiempo.', 'feedback-10')">Tecnología</button>
+                        <button
+                            onclick="checkAnswer(10, false, 'No cambió de local, solo de herramienta. ¡Intenta de nuevo!', 'feedback-10')">Ubicación</button>
+                        <button
+                            onclick="checkAnswer(10, false, 'No es un tema de clima, sino de rapidez de producción. ¡Prueba otra vez!', 'feedback-10')">Decoración</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Repaso Final (Metacognición integrada) -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Qué es más importante para un emprendedor?</b></p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', false, 'Eficacia es buena, pero falta el ahorro.', 'feedback-r1')">Solo
+                                    Eficacia</button>
+                                <button
+                                    onclick="checkAnswer('r1', true, '¡Correcto! El equilibrio hace al negocio sostenible.', 'feedback-r1')">Eficiencia
+                                    + Eficacia</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>¿Cómo puedo aplicar esto en mi vida?</b></p>
+                            <p><i>Organizando mis tareas escolares para terminar más rápido y con mejor calidad.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection">
+                    <div class="badge">🏆</div>
+                    <h2>¡Excelente Trabajo!</h2>
+                    <p>Has completado la lección sobre Productividad.</p>
+                    <div class="reflection-stars">
+                        <div class="star-card"
+                            onclick="showFeedback('meta', '¡Felicidades! Eres un emprendedor en potencia.')">
+                            ⭐ <span>¡Entendido!</span>
+                        </div>
+                    </div>
+                    <div id="feedback-meta" class="feedback-box"></div>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
