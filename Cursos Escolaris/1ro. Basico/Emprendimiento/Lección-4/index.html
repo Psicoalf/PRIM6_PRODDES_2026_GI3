@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: Misión y Visión Personal - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Emprendimiento para la productividad</p>
+                    <h1>MISIÓN Y VISIÓN PERSONAL</h1>
+                    <p class="lesson-info">Lección 4 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Camino al sol (Visión) -->
+                            <path d="M40 180C40 180 80 140 110 140C140 140 180 180 180 180" stroke="#244b5a"
+                                stroke-width="8" stroke-linecap="round" />
+                            <circle cx="110" cy="80" r="40" fill="#f7be00" />
+                            <path d="M110 20V50M110 110V140M50 80H20M200 80H170" stroke="#db6015" stroke-width="5"
+                                stroke-linecap="round" />
+                            <!-- Persona (Misión) -->
+                            <circle cx="110" cy="150" r="15" fill="#993921" />
+                            <path d="M110 165V190M95 175H125" stroke="#993921" stroke-width="4"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy definiremos el mapa de tus sueños y el plan para lograrlos. 🗺️✨
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Definir los conceptos de misión y visión aplicados a la vida personal.</li>
+                        <li>Comprender cómo el emprendimiento mejora la calidad de vida en el entorno.</li>
+                        <li>Redactar enunciados que reflejen metas familiares, culturales y comunitarias.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Cuál es tu sueño?</h2>
+                    <p>Piensa en algo que te apasione y en cómo te gustaría que fuera tu vida en unos años...</p>
+                    <div class="interactive-grid">
+                        <div class="info-card"
+                            onclick="showFeedback('p3', '¡Genial! Tener claridad sobre lo que queremos es el primer paso para construir una visión inspiradora.')">
+                            <p>¿Qué huella positiva te gustaría dejar en tu familia o en tu comunidad?</p>
+                        </div>
+                    </div>
+                    <div id="feedback-p3" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras Clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Conceptos Estrella</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🚀</span>
+                            <h3>Visión</h3>
+                            <p>Es el destino final; el sueño que queremos alcanzar a largo plazo.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🛠️</span>
+                            <h3>Misión</h3>
+                            <p>Es lo que hacemos hoy; nuestro propósito y compromiso diario.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🏡</span>
+                            <h3>Entorno</h3>
+                            <p>Tu familia, cultura y comunidad donde tu emprendimiento impacta.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido: La Visión -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>🔭 La Visión: Mirando al futuro</h2>
+                    <p>La visión responde a la pregunta: <b>¿Qué quiero llegar a ser?</b></p>
+                    <div class="reflection-box">
+                        <p>Debe ser ambiciosa pero posible, inspiradora y enfocada en mejorar no solo tu vida, sino
+                            también tu entorno.</p>
+                    </div>
+                    <p><i>Ejemplo: "Ser un médico que brinde salud gratuita a mi comunidad."</i></p>
+                </div>
+            </section>
+
+            <!-- 6. Contenido: La Misión -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>🏃 La Misión: El paso a paso</h2>
+                    <p>La misión responde a: <b>¿Quién soy y qué hago hoy?</b></p>
+                    <p>Es la herramienta que usamos para avanzar hacia nuestra visión día tras día.</p>
+                    <div class="keywords-container" style="grid-template-columns: 1fr;">
+                        <div class="keyword" style="border-top-color: #993921;">
+                            <p>"Mi misión es estudiar con dedicación y ayudar en el negocio familiar para aprender sobre
+                                emprendimiento."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🔍 Impacto del Emprendimiento</h2>
+                    <p>Haz clic para ver cómo tus metas mejoran la calidad de vida:</p>
+                    <div class="explorer-grid-9">
+                        <div class="folder-mini"
+                            onclick="showPopup('Familia: El emprendimiento genera ingresos y seguridad para tus seres queridos.')">
+                            Familia</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Cultura: Emprender con artesanías o comida tradicional preserva nuestras raíces.')">
+                            Cultura</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Comunidad: Un nuevo negocio crea empleos y resuelve problemas locales.')">
+                            Comunidad</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Bienestar: Lograr tus metas te da satisfacción personal y felicidad.')">
+                            Personal</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Educación: Tu esfuerzo motiva a otros jóvenes a seguir sus sueños.')">
+                            Ejemplo</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Ambiente: Emprender de forma responsable protege nuestro entorno natural.')">
+                            Ecología</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ ¿Misión o Visión?</h2>
+                    <p>Si dices: <b>"Seré el mejor chef de mi región y abriré un restaurante de comida típica"</b>. ¿Qué
+                        estás expresando?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(8, true, '¡Correcto! Es un sueño a largo plazo, por lo tanto, es tu Visión.')">Es
+                            mi Visión</button>
+                        <button
+                            onclick="checkAnswer(8, false, 'No exactamente. La misión es lo que harías HOY para lograrlo. ¡Intenta de nuevo!')">Es
+                            mi Misión</button>
+                        <button
+                            onclick="checkAnswer(8, false, 'La calidad de vida es la meta, pero la frase describe un futuro. ¡Prueba otra vez!')">Es
+                            Calidad de Vida</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 El rompecabezas de vida</h2>
+                    <p>Relaciona cada inicio de frase con su concepto correspondiente:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="A" id="btn-a">"Yo soy..."</button>
+                            <button class="match-btn" data-type="B" id="btn-b">"Yo seré..."</button>
+                            <button class="match-btn" data-type="C" id="btn-c">"Mi entorno es..."</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="B" id="desc-b">Habla de la Visión</button>
+                            <button class="match-btn" data-target="A" id="desc-a">Habla de la Misión</button>
+                            <button class="match-btn" data-target="C" id="desc-c">Donde impacto</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()" style="display:none">Intentar de
+                        nuevo</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Caso: El Emprendedor Social</h2>
+                    <p>Pedro quiere crear una academia de fútbol en su barrio para alejar a los niños de los peligros de
+                        la calle. Él dice: "Mi propósito es enseñar valores a través del deporte".</p>
+                    <p>¿Qué está definiendo Pedro con esta frase sobre su propósito actual?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(10, true, '¡Exacto! El propósito actual y la acción diaria definen la Misión.', 'feedback-10')">Su
+                            Misión</button>
+                        <button
+                            onclick="checkAnswer(10, false, 'La visión sería el sueño final de la academia. ¡Intenta de nuevo!', 'feedback-10')">Su
+                            Visión</button>
+                        <button
+                            onclick="checkAnswer(10, false, 'Es un factor, pero no el concepto que define su propósito. ¡Prueba otra vez!', 'feedback-10')">Sus
+                            Recursos</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Repaso Final (Metacognición) -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi Plan de Vida</h2>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Para qué sirve tener una visión clara?</b></p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', false, 'Solo soñar no basta. ¡Hay más!', 'feedback-r1')">Para
+                                    soñar</button>
+                                <button
+                                    onclick="checkAnswer('r1', true, '¡Correcto! Nos da dirección y motivación para cada día.', 'feedback-r1')">Para
+                                    tener dirección</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>Reflexión del día:</b></p>
+                            <p><i>El emprendimiento no es solo ganar dinero, es la herramienta para cumplir mi misión y
+                                    alcanzar mi visión, beneficiando a quienes me rodean.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection">
+                    <div class="badge">🌟</div>
+                    <h2>¡Felicidades, Futuro Líder!</h2>
+                    <p>Has dado el primer paso para diseñar tu futuro con éxito.</p>
+                    <div class="reflection-stars">
+                        <div class="star-card"
+                            onclick="showFeedback('meta', '¡Felicidades! Tienes las herramientas para transformar tu entorno.')">
+                            ⭐ <span>¡Entendido!</span>
+                        </div>
+                    </div>
+                    <div id="feedback-meta" class="feedback-box"></div>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
