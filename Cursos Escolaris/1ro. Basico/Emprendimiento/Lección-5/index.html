@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: Priorización de Necesidades - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">Emprendimiento para la productividad</p>
+                    <h1>NECESIDADES FAMILIARES</h1>
+                    <p class="lesson-info">Lección 5 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Casa (Vivienda/Familia) -->
+                            <path d="M110 40L40 100H180L110 40Z" fill="#db6015" />
+                            <rect x="60" y="100" width="100" height="70" fill="#244b5a" />
+                            <rect x="95" y="130" width="30" height="40" fill="#f7be00" />
+                            <!-- Corazón (Afecto/Seguridad) -->
+                            <path
+                                d="M180 60C180 40 210 40 210 60C210 80 180 100 180 100C180 100 150 80 150 60C150 40 180 40 180 60Z"
+                                fill="#993921" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy aprenderemos a identificar lo más importante para nuestra familia
+                        y cómo tomar mejores decisiones. 🏠👩‍👩‍👦</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Definir las necesidades básicas de la familia y su importancia.</li>
+                        <li>Diferenciar entre necesidades (vitales) y deseos (gustos).</li>
+                        <li>Priorizar gastos familiares para mejorar la calidad de vida.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Qué es indispensable?</h2>
+                    <p>Imagina que tienes una moneda mágica y solo puedes comprar UNA cosa para tu casa hoy...</p>
+                    <div class="interactive-grid">
+                        <div class="info-card"
+                            onclick="showFeedback('p3', '¡Buen punto! Elegir lo indispensable sobre lo que simplemente nos gusta es la clave de una buena administración familiar.')">
+                            <p>¿Qué elegirías: comida para la cena o un juguete nuevo? ¿Por qué?</p>
+                        </div>
+                    </div>
+                    <div id="feedback-p3" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras Clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Conceptos Básicos</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🍎</span>
+                            <h3>Necesidad</h3>
+                            <p>Algo vital de lo que no podemos prescindir (salud, comida).</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🎮</span>
+                            <h3>Deseo</h3>
+                            <p>Cosas que queremos tener pero no son indispensables para vivir.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🔝</span>
+                            <h3>Priorizar</h3>
+                            <p>Ordenar de lo más importante a lo menos importante.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido: Las Necesidades -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>📋 ¿Cuáles son nuestras necesidades?</h2>
+                    <p>Para que una familia viva bien, debe cubrir áreas fundamentales:</p>
+                    <div class="reflection-box">
+                        <p><b>Biológicas:</b> Alimentación, descanso, vestuario y vivienda.</p>
+                        <p><b>Sociales:</b> Educación, salud, seguridad y afecto.</p>
+                    </div>
+                    <p>Si estas no se cumplen, nuestra calidad de vida disminuye.</p>
+                </div>
+            </section>
+
+            <!-- 6. Contenido: Priorizar es decidir -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>⚖️ Necesidad vs Deseo</h2>
+                    <p>Como los recursos (dinero y tiempo) son limitados, debemos elegir sabiamente.</p>
+                    <div class="keywords-container" style="grid-template-columns: 1fr 1fr;">
+                        <div class="keyword" style="border-top-color: #244b5a;">
+                            <h3>Necesidad</h3>
+                            <p>Pagar el agua, comprar medicina, útiles escolares.</p>
+                        </div>
+                        <div class="keyword" style="border-top-color: #f7be00;">
+                            <h3>Deseo</h3>
+                            <p>Ir al cine, comprar dulces, el teléfono más caro.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Exploración Visual -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>🔍 El Mapa de Necesidades</h2>
+                    <p>Haz clic en cada área para ver cómo influye en tu vida:</p>
+                    <div class="explorer-grid-9">
+                        <div class="folder-mini"
+                            onclick="showPopup('Alimentación: Nos da la energía para estudiar y trabajar cada día.')">
+                            Nutrición</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Educación: Nos abre puertas para proyectos futuros y emprendimientos.')">
+                            Educación</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Salud: Prevenir enfermedades nos permite ser productivos y felices.')">
+                            Salud</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Vivienda: Un lugar seguro y limpio protege a nuestra familia.')">Hogar
+                        </div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Vestuario: Nos protege del clima y ayuda a nuestra identidad personal.')">
+                            Ropa</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Afecto: El cariño y la unión son el motor de un hogar fuerte.')">Cariño
+                        </div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Actividad de Comprensión -->
+            <section class="slide" id="slide-8">
+                <div class="content quiz">
+                    <h2>✏️ Identifica lo Vital</h2>
+                    <p>La familia Pérez tiene Q100 extras este mes. ¿Cuál sería la mejor forma de <b>priorizar</b> según
+                        la lección?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(8, true, '¡Correcto! La salud es una necesidad básica y debe ir antes que un deseo.')">Comprar
+                            medicina necesaria</button>
+                        <button
+                            onclick="checkAnswer(8, false, 'Los dulces son un deseo recreativo, no una necesidad vital. ¡Intenta de nuevo!')">Comprar
+                            dulces para todos</button>
+                        <button
+                            onclick="checkAnswer(8, false, 'Ir al cine es recreación, es importante pero no vital. ¡Prueba otra vez!')">Ir
+                            al cine a ver un estreno</button>
+                    </div>
+                    <div id="feedback-8" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Juego Educativo -->
+            <section class="slide" id="slide-9">
+                <div class="content">
+                    <h2>🎮 Clasifica tus opciones</h2>
+                    <p>Relaciona cada elemento con su categoría correcta:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="A" id="btn-a">Zapatos para la escuela</button>
+                            <button class="match-btn" data-type="B" id="btn-b">Videojuego de moda</button>
+                            <button class="match-btn" data-type="C" id="btn-c">Frutas y verduras</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="B" id="desc-b">Es un Deseo</button>
+                            <button class="match-btn" data-target="A" id="desc-a">Necesidad de Vestuario</button>
+                            <button class="match-btn" data-target="C" id="desc-c">Necesidad de Nutrición</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()" style="display:none">Intentar de
+                        nuevo</button>
+                </div>
+            </section>
+
+            <!-- 10. Aplicación Práctica -->
+            <section class="slide" id="slide-10">
+                <div class="content quiz">
+                    <h2>💡 Caso: El Emprendedor en Casa</h2>
+                    <p>Te das cuenta de que en tu comunidad muchas familias no tienen acceso a agua purificada
+                        (necesidad de salud). Tú decides vender filtros económicos.</p>
+                    <p>¿Qué aspecto influyó más en el inicio de tu emprendimiento?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(10, true, '¡Exacto! Identificar una necesidad básica insatisfecha es el origen de grandes emprendimientos.', 'feedback-10')">Identificar
+                            una Necesidad</button>
+                        <button
+                            onclick="checkAnswer(10, false, 'Querías ganar dinero rápido, pero no es lo que influyó en la idea. ¡Intenta de nuevo!', 'feedback-10')">Solo
+                            querer dinero</button>
+                        <button
+                            onclick="checkAnswer(10, false, 'La publicidad ayuda después, pero la idea nace de la necesidad. ¡Prueba otra vez!', 'feedback-10')">Ver
+                            mucha televisión</button>
+                    </div>
+                    <div id="feedback-10" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 11. Repaso Final -->
+            <section class="slide" id="slide-11">
+                <div class="content reflection">
+                    <h2>🧠 Mi Reflexión</h2>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p><b>¿Por qué debemos aprender a priorizar?</b></p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', false, 'Comprar todo es imposible, debemos saber elegir.', 'feedback-r1')">Para
+                                    comprar todo</button>
+                                <button
+                                    onclick="checkAnswer('r1', true, '¡Así es! Para asegurar el bienestar familiar con lo que tenemos.', 'feedback-r1')">Para
+                                    asegurar bienestar</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="reflection-box">
+                            <p><b>¿Qué aprendí hoy?</b></p>
+                            <p><i>Aprendí que cuidar el presupuesto familiar empieza por saber qué es realmente
+                                    importante y qué puede esperar.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection">
+                    <div class="badge">🏠✨</div>
+                    <h2>¡Misión Cumplida!</h2>
+                    <p>Ahora sabes cómo ayudar a tu familia a tomar mejores decisiones.</p>
+                    <div class="reflection-stars">
+                        <div class="star-card"
+                            onclick="showFeedback('meta', '¡Felicidades! Eres un administrador responsable de tu futuro.')">
+                            ⭐ <span>¡Entendido!</span>
+                        </div>
+                    </div>
+                    <div id="feedback-meta" class="feedback-box"></div>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
