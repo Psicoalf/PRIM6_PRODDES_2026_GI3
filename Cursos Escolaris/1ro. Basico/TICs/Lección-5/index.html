@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: El Podcast - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">TICs</p>
+                    <h1>EL PODCAST</h1>
+                    <p class="lesson-info">Lección 5 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="85" y="140" width="50" height="10" rx="5" fill="#244b5a" />
+                            <rect x="105" y="110" width="10" height="40" fill="#244b5a" />
+                            <rect x="80" y="30" width="60" height="85" rx="30" fill="#244b5a" />
+                            <rect x="90" y="45" width="40" height="50" rx="20" fill="#ffffff" opacity="0.2" />
+                            <circle cx="110" cy="70" r="15" fill="#db6015" />
+                            <path d="M110 60V80M100 70H120" stroke="white" stroke-width="4" stroke-linecap="round" />
+                            <path d="M50 80C50 40 170 40 170 80" stroke="#f7be00" stroke-width="8"
+                                stroke-linecap="round" />
+                            <rect x="40" y="70" width="25" height="40" rx="5" fill="#f7be00" />
+                            <rect x="155" y="70" width="25" height="40" rx="5" fill="#f7be00" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy aprenderemos a crear contenido de audio profesional bajo demanda.
+                        🎙️</p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Identificar qué es un podcast y sus ventajas sobre el video.</li>
+                        <li>Comprender las 4 etapas para crear un podcast de calidad.</li>
+                        <li>Reconocer las herramientas digitales para la edición y publicación de audio.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Radio o Podcast?</h2>
+                    <p>Imagina que quieres escuchar tu programa favorito pero estás en el gimnasio o en el bus...</p>
+                    <div class="interactive-grid">
+                        <div class="info-card"
+                            onclick="showFeedback('p3', '¡Correcto! El podcast es contenido bajo demanda: tú eliges qué, cuándo y dónde escuchar.')">
+                            <p>¿Cuál es la principal ventaja de un podcast frente a un programa de radio tradicional?
+                            </p>
+                        </div>
+                    </div>
+                    <div id="feedback-p3" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras Clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Palabras clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">📻</span>
+                            <h3>Bajo Demanda</h3>
+                            <p>Tú tienes el control total del momento de escucha.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">📲</span>
+                            <h3>Agregador</h3>
+                            <p>App que descarga automáticamente los capítulos (Spotify, etc).</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">📜</span>
+                            <h3>Guión</h3>
+                            <p>La guía que evita que te pierdas durante la grabación.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido: Historia y Eficiencia -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>⏳ Un poco de historia</h2>
+                    <p>En <b>2004</b>, Adam Curry creó una forma automática para que el audio llegara a los programas de
+                        podcast.</p>
+                    <div class="reflection-box">
+                        <p><b>Ahorro de Datos:</b> Un podcast consume mucho menos "ancho de banda" (internet) que un
+                            video. ¡Es ideal para ahorrar datos en tu celular!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. El Proceso: Paso 1 y 2 -->
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>🏗️ Paso 1: Planificar y Grabar</h2>
+                    <p>Antes de hablar, debemos definir:</p>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <h3>Público</h3>
+                            <p>¿Quién nos va a escuchar?</p>
+                        </div>
+                        <div class="keyword">
+                            <h3>Ambiente</h3>
+                            <p>Un lugar cómodo y silencioso.</p>
+                        </div>
+                        <div class="keyword">
+                            <h3>Micrófono</h3>
+                            <p>Posicionarlo arriba o debajo de la boca.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. El Proceso: Paso 3: Editar con Audacity -->
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>✂️ Paso 3: Edición Pro</h2>
+                    <p>Usamos <b>Audacity</b> (software libre) para mejorar el audio con estos efectos:</p>
+                    <ul class="objectives-list">
+                        <li><b>Reducción de ruido:</b> Para eliminar el "ssshhh" del fondo.</li>
+                        <li><b>Normalizar:</b> Para que el volumen sea el máximo sin perder calidad.</li>
+                        <li><b>Auto Duck:</b> Baja la música automáticamente cuando tú hablas.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 8. Exploración Visual: Formatos y Plataformas -->
+            <section class="slide" id="slide-8">
+                <div class="content">
+                    <h2>🔍 El Ecosistema Podcast</h2>
+                    <p>Haz clic en cada elemento para conocerlo:</p>
+                    <div class="explorer-grid-9">
+                        <div class="folder-mini"
+                            onclick="showPopup('MP3 a 96KBps: La calidad ideal para exportar tu podcast.')">
+                            Digitalización</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('SoundCloud: Almacena gratis hasta 3 horas de audio.')">SoundCloud</div>
+                        <div class="folder-mini" onclick="showPopup('Spotify: El agregador más popular actualmente.')">
+                            Spotify</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Fuente RSS: El código que permite que las apps lean tu programa.')">RSS
+                            Feed</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('iVoox / Google Podcasts: Otras plataformas de distribución.')">Otras
+                            Apps</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('Audacity: Herramienta clave para grabar y editar en PC.')">Audacity
+                        </div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 9. Actividad de Comprensión -->
+            <section class="slide" id="slide-9">
+                <div class="content quiz">
+                    <h2>✏️ Actividad de comprensión</h2>
+                    <p>Si terminaste de grabar y quieres que tu archivo suene profesional y se pueda subir a internet,
+                        ¿qué formato y calidad recomienda la lección?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(9, false, 'El WAV es muy pesado para internet. ¡Busca el recomendado!')">Archivos
+                            .wav pesados</button>
+                        <button
+                            onclick="checkAnswer(9, true, '¡Correcto! MP3 a 96KBps es excelente para podcasts.')">Archivos
+                            .mp3 a 96KBps</button>
+                        <button
+                            onclick="checkAnswer(9, false, 'La resolución es para video, no para audio. ¡Intenta de nuevo!')">Formato
+                            4K Alta Resolución</button>
+                        <button
+                            onclick="checkAnswer(9, false, 'El ZIP es para comprimir carpetas, no para escuchar. ¡Prueba otra vez!')">Carpeta
+                            comprimida .zip</button>
+                    </div>
+                    <div id="feedback-9" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 10. Juego Educativo -->
+            <section class="slide" id="slide-10">
+                <div class="content">
+                    <h2>🎮 Ordena el Proceso</h2>
+                    <p>Relaciona cada etapa con su acción correspondiente:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="A" id="btn-a">1. Planificar</button>
+                            <button class="match-btn" data-type="B" id="btn-b">2. Grabar</button>
+                            <button class="match-btn" data-type="C" id="btn-c">3. Editar</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="C" id="desc-c">Usar filtros en Audacity</button>
+                            <button class="match-btn" data-target="A" id="desc-a">Definir el público y guión</button>
+                            <button class="match-btn" data-target="B" id="desc-b">Buscar un lugar silencioso</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()" style="display:none">Intentar de
+                        nuevo</button>
+                </div>
+            </section>
+
+            <!-- 11. Repaso Final -->
+            <section class="slide" id="slide-11">
+                <div class="content">
+                    <h2>📋 Repaso rápido</h2>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p>1. ¿Debe estar el micrófono pegado a los labios?</p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', false, 'No, debe estar arriba o abajo para evitar ruidos de soplido.', 'feedback-r1')">Sí</button>
+                                <button
+                                    onclick="checkAnswer('r1', true, '¡Correcto! Así evitamos ruidos innecesarios.', 'feedback-r1')">No</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="repaso-item">
+                            <p>2. ¿Es el RSS necesario para que nos escuchen en apps?</p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r2', true, '¡Así es! Es la \'fuente\' que leen los agregadores.', 'feedback-r2')">Verdadero</button>
+                                <button
+                                    onclick="checkAnswer('r2', false, 'Sin RSS, las apps no sabrían cuándo subes un episodio.', 'feedback-r2')">Falso</button>
+                            </div>
+                            <div id="feedback-r2" class="feedback-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Metacognición y Cierre -->
+            <section class="slide" id="slide-12">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <div class="reflection-box">
+                        <p><b>¿Qué aprendí hoy?</b></p>
+                        <p><i>Hacer un podcast requiere técnica, pero es una herramienta increíble para compartir
+                                conocimiento sin gastar muchos datos.</i></p>
+                    </div>
+                    <div class="reflection-stars">
+                        <div class="star-card"
+                            onclick="showFeedback('meta', '¡Felicidades! Estás listo para grabar tu primer episodio.')">
+                            ⭐ <span>¡Entendido!</span>
+                        </div>
+                    </div>
+                    <div id="feedback-meta" class="feedback-box"></div>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

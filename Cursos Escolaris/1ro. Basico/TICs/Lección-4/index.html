@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: El Video - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <!-- Decoration -->
+        <div class="header-decor"></div>
+
+        <!-- Navigation Arrows -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <!-- Slides -->
+        <div class="slides">
+            <!-- 1. Portada -->
+            <section class="slide active" id="slide-1">
+                <div class="content portada">
+                    <p class="materia">TICs</p>
+                    <h1>EL VIDEO DIGITAL</h1>
+                    <p class="lesson-info">Lección 4 • 1ro. Básico</p>
+                    <div class="illustration">
+                        <svg width="220" height="200" viewBox="0 0 220 200" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Camera Body -->
+                            <rect x="40" y="60" width="100" height="80" rx="10" fill="#244b5a" />
+                            <circle cx="90" cy="100" r="25" stroke="#ffffff" stroke-width="6" />
+                            <circle cx="90" cy="100" r="10" fill="#db6015" />
+                            <!-- Flash/Lens top -->
+                            <rect x="60" y="45" width="30" height="15" fill="#f7be00" />
+                            <!-- Screen -->
+                            <rect x="150" y="70" width="40" height="60" rx="4" fill="#db6015" />
+                            <path d="M140 90L150 75V125L140 110V90Z" fill="#db6015" />
+                            <!-- Film reel decoration -->
+                            <circle cx="50" cy="30" r="15" stroke="#244b5a" stroke-width="4" />
+                            <circle cx="50" cy="30" r="5" fill="#244b5a" />
+                            <circle cx="85" cy="30" r="15" stroke="#244b5a" stroke-width="4" />
+                            <circle cx="85" cy="30" r="5" fill="#244b5a" />
+                        </svg>
+                    </div>
+                    <p class="welcome-msg">¡Hola! Hoy descubriremos cómo crear y manejar videos de forma profesional. 🎬
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2. Objetivos -->
+            <section class="slide" id="slide-2">
+                <div class="content">
+                    <h2>🎯 Objetivos de aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li>Identificar los 9 formatos de video más influyentes en la historia y actualidad.</li>
+                        <li>Diferenciar entre formatos universales, de alta calidad y para web.</li>
+                        <li>Seleccionar el formato adecuado según el dispositivo y la tarea académica.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Activación -->
+            <section class="slide" id="slide-3">
+                <div class="content">
+                    <h2>🤔 ¿Te has preguntado?</h2>
+                    <p>Cuando ves un video en YouTube o TikTok...</p>
+                    <div class="interactive-grid">
+                        <div class="info-card"
+                            onclick="showFeedback('p3', '¡Exacto! Un video es una sucesión rápida de imágenes fijas llamadas fotogramas.')">
+                            <p>¿Qué es lo que realmente hace que una imagen se mueva en la pantalla?</p>
+                        </div>
+                    </div>
+                    <div id="feedback-p3" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 4. Palabras Clave -->
+            <section class="slide" id="slide-4">
+                <div class="content">
+                    <h2>🔑 Palabras clave</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🎞️</span>
+                            <h3>Fotograma</h3>
+                            <p>Cada una de las fotos individuales que forman un video.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">📐</span>
+                            <h3>Resolución</h3>
+                            <p>La claridad del video (ejemplo: 1080p o 4K).</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">✂️</span>
+                            <h3>Edición</h3>
+                            <p>El proceso de cortar, unir y mejorar fragmentos de video.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Contenido Principal: Los 9 Gigantes -->
+            <section class="slide" id="slide-5">
+                <div class="content">
+                    <h2>🌍 Los 3 más usados</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">📱</span>
+                            <h3>MP4</h3>
+                            <p>Lanzado en 2001, evolucionó del MOV para ser el estándar que hoy corre en todo el mundo.
+                            </p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🍎</span>
+                            <h3>MOV</h3>
+                            <p>Nació en 1991 junto a QuickTime. Fue la base técnica para crear el formato MP4 años
+                                después.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🪟</span>
+                            <h3>AVI</h3>
+                            <p>Creado por Microsoft en 1992 para llevar el video a las primeras computadoras con
+                                Windows.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-6">
+                <div class="content">
+                    <h2>🕸️ Formatos para Internet</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🌐</span>
+                            <h3>WebM</h3>
+                            <p>Google lo lanzó en 2010 como una alternativa libre y rápida para el video en alta
+                                definición en la web.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">⚡</span>
+                            <h3>FLV</h3>
+                            <p>Fue el rey de los videos en los años 2000 gracias a Adobe Flash y los inicios de YouTube.
+                            </p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">📼</span>
+                            <h3>MKV</h3>
+                            <p>Nació en Rusia en 2002. Es un contenedor libre que puede guardar pistas de idiomas y
+                                subtítulos infinitos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-7">
+                <div class="content">
+                    <h2>📜 Formatos de Especialidad</h2>
+                    <div class="keywords-container">
+                        <div class="keyword">
+                            <span class="icon">🏗️</span>
+                            <h3>MPEG</h3>
+                            <p>Establecido en 1988, es el "abuelo" digital que permitió que existieran los DVDs y la TV
+                                digital.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">📟</span>
+                            <h3>WMV</h3>
+                            <p>Lanzado en 1999 por Microsoft para competir en el streaming de video por internet en PCs
+                                antiguas.</p>
+                        </div>
+                        <div class="keyword">
+                            <span class="icon">🤳</span>
+                            <h3>3GP</h3>
+                            <p>Creado en 2004 para que los primeros celulares con cámara pudieran grabar video sin
+                                llenar su pequeña memoria.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Exploración Visual -->
+            <section class="slide" id="slide-8">
+                <div class="content">
+                    <h2>🔍 Mural de los 9 Formatos</h2>
+                    <p>Haz clic para ver las características de cada uno:</p>
+                    <div class="explorer-grid-9">
+                        <div class="folder-mini"
+                            onclick="showPopup('MP4: Lanzado en 2001, es el estándar más compatible del mundo.')">.mp4
+                        </div>
+                        <div class="folder-mini"
+                            onclick="showPopup('MOV: Desarrollado por Apple en 1991 para su reproductor QuickTime.')">
+                            .mov</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('AVI: Introducido por Microsoft en 1992 para las primeras PCs.')">.avi
+                        </div>
+                        <div class="folder-mini"
+                            onclick="showPopup('WebM: Lanzado por Google en 2010 para optimizar el video en la web.')">
+                            .webm</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('MKV: Creado en 2002 como un formato libre capaz de contener de todo.')">
+                            .mkv</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('FLV: Fue el motor de los videos en la web durante los inicios de YouTube.')">
+                            .flv</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('MPEG: El estándar pionero de 1988 que permitió el video en CD y DVD.')">
+                            .mpeg</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('WMV: Diseñado por Microsoft en 1999 para el streaming por internet.')">
+                            .wmv</div>
+                        <div class="folder-mini"
+                            onclick="showPopup('3GP: Creado en 2004 para ahorrar espacio en los celulares antiguos.')">
+                            .3gp</div>
+                    </div>
+                    <div id="explorer-popup" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 7. Actividad de Comprensión -->
+            <section class="slide" id="slide-9">
+                <div class="content quiz">
+                    <h2>✏️ Actividad de comprensión</h2>
+                    <p>Si grabas un video para una tarea y necesitas que se vea en <b>cualquier</b> computadora de tus
+                        compañeros, ¿cuál es el mejor formato?</p>
+                    <div class="options">
+                        <button
+                            onclick="checkAnswer(9, true, '¡Correcto! El MP4 es el formato más compatible actualmente.')">🎥
+                            Formato .mp4 (Universal)</button>
+                        <button
+                            onclick="checkAnswer(9, false, 'El .avi es muy pesado y no todos los celulares lo abren. ¡Prueba otra vez!')">📼
+                            Formato .avi (Pesado)</button>
+                        <button
+                            onclick="checkAnswer(9, false, '¡Cuidado! El .exe es un programa, no un video. ¡Intenta de nuevo!')">⚙️
+                            Formato .exe (Ejecutable)</button>
+                        <button
+                            onclick="checkAnswer(9, false, 'El .pdf es solo para documentos planos. ¡Sigue intentando!')">📄
+                            Formato .pdf (Documento)</button>
+                    </div>
+                    <div id="feedback-9" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 8. Juego Educativo -->
+            <section class="slide" id="slide-10">
+                <div class="content">
+                    <h2>🎮 Desafío de Gigantes</h2>
+                    <p>Relaciona solo los formatos clave:</p>
+                    <div class="game-match">
+                        <div class="match-column" id="col-icons">
+                            <button class="match-btn" data-type="A" id="btn-a">📄 WebM</button>
+                            <button class="match-btn" data-type="B" id="btn-b">📱 MP4</button>
+                            <button class="match-btn" data-type="C" id="btn-c">🎞️ MKV</button>
+                        </div>
+                        <div class="match-column" id="col-desc">
+                            <button class="match-btn" data-target="B" id="desc-b">Todo Terreno</button>
+                            <button class="match-btn" data-target="A" id="desc-a">Especial para Web</button>
+                            <button class="match-btn" data-target="C" id="desc-c">Video + Subtítulos</button>
+                        </div>
+                    </div>
+                    <div id="feedback-game" class="feedback-box"></div>
+                    <button id="retry-game" class="retry-btn" onclick="resetGame()">Intentar de nuevo</button>
+                </div>
+            </section>
+
+            <!-- 9. Aplicación Práctica -->
+            <section class="slide" id="slide-11">
+                <div class="content">
+                    <h2>🚀 Situación Real</h2>
+                    <p>Sofía quiere editar un video para su proyecto de Ciencias. Sabe que el video original es muy
+                        largo. ¿Qué herramienta de edición debería usar primero?</p>
+                    <div class="options horizontal">
+                        <button class="opt-btn"
+                            onclick="checkAnswer(11, true, '¡Correcto! Cortar (Trim) ayuda a dejar solo lo importante.')">Herramienta
+                            de Recortar</button>
+                        <button class="opt-btn"
+                            onclick="checkAnswer(11, false, 'Los filtros son geniales, pero primero hay que organizar el contenido. ¡Intenta otra vez!')">Añadir
+                            Filtros</button>
+                        <button class="opt-btn"
+                            onclick="checkAnswer(11, false, 'La música es el paso final. ¡Busca algo más básico!')">Poner
+                            Música</button>
+                    </div>
+                    <div id="feedback-11" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 10. Repaso Final -->
+            <section class="slide" id="slide-12">
+                <div class="content">
+                    <h2>📋 Repaso rápido</h2>
+                    <div class="repaso-scroll">
+                        <div class="repaso-item">
+                            <p>1. ¿Un video son muchas fotos juntas?</p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r1', true, '¡Exacto! Se llaman fotogramas.', 'feedback-r1')">Sí</button>
+                                <button
+                                    onclick="checkAnswer('r1', false, '¡Piénsalo! ¿Cómo se genera el movimiento?', 'feedback-r1')">No</button>
+                            </div>
+                            <div id="feedback-r1" class="feedback-box"></div>
+                        </div>
+                        <div class="repaso-item">
+                            <p>2. ¿El formato .mp4 es de alta compatibilidad?</p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r2', true, '¡Así es! Es el estándar hoy en día.', 'feedback-r2')">Verdadero</button>
+                                <button
+                                    onclick="checkAnswer('r2', false, '¡Error! Es el más usado en el mundo.', 'feedback-r2')">Falso</button>
+                            </div>
+                            <div id="feedback-r2" class="feedback-box"></div>
+                        </div>
+                        <div class="repaso-item">
+                            <p>3. ¿Mayor resolución significa video más borroso?</p>
+                            <div class="btn-group">
+                                <button
+                                    onclick="checkAnswer('r3', false, 'Al revés: mayor resolución es más claridad.', 'feedback-r3')">Sí</button>
+                                <button
+                                    onclick="checkAnswer('r3', true, '¡Correcto! Significa más detalle y nitidez.', 'feedback-r3')">No</button>
+                            </div>
+                            <div id="feedback-r3" class="feedback-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. Metacognición -->
+            <section class="slide" id="slide-13">
+                <div class="content reflection">
+                    <h2>🧠 Mi aprendizaje</h2>
+                    <p>Reflexiona sobre lo aprendido hoy:</p>
+                    <div class="reflection-box">
+                        <p><b>¿Qué fue lo más importante hoy?</b></p>
+                        <p><i>Entender que el video es una herramienta poderosa que debo usar con responsabilidad
+                                académica.</i></p>
+                    </div>
+                    <p>¿Cómo te sientes con el tema de hoy?</p>
+                    <div class="reflection-stars">
+                        <div class="star-card"
+                            onclick="showFeedback('meta', '¡Felicidades! Ya dominas los conceptos de video.')">
+                            ⭐ <span>¡Aprendí mucho!</span>
+                        </div>
+                        <div class="star-card"
+                            onclick="showFeedback('meta', '¡No te rindas! Revisa la lección de nuevo para aclarar dudas.')">
+                            ✨ <span>Quiero aprender más</span>
+                        </div>
+                    </div>
+                    <div id="feedback-meta" class="feedback-box"></div>
+                </div>
+            </section>
+
+            <!-- 12. Cierre -->
+            <section class="slide" id="slide-14">
+                <div class="content cierre">
+                    <div class="badge">🎬🏆</div>
+                    <h2>¡Misión cumplida!</h2>
+                    <p>Ahora eres un experto en video digital. ¡Sigue creando!</p>
+                    <div class="school-logo">COLEGIO ESCOLARIS</div>
+                    <button class="restart-btn" onclick="goToSlide(0)">Volver a empezar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
