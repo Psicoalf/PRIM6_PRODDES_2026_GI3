@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: Rapidez y Velocidad - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navigation Arrows -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Diapositiva anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Diapositiva siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <h1>Rapidez y Velocidad</h1>
+            <img src="images/portada.png" alt="Atletismo rapidez" class="slide-img">
+            <h2>Lección 5 | 1ro. Básico</h2>
+            <p>¿Qué tan rápido puedes ser? En esta lección descubriremos la ciencia detrás del movimiento y cómo
+                reaccionar en segundos.</p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <h2>Objetivos de Aprendizaje</h2>
+            <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <p>🎯 1. Diferenciar los conceptos de rapidez y velocidad física.</p>
+                <p>🎯 2. Mejorar el tiempo de reacción ante estímulos externos.</p>
+                <p>🎯 3. Practicar desplazamientos veloces con seguridad para evitar lesiones.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <h2>¿Eres veloz?</h2>
+            <p>Si un auto recorre 100 metros en línea recta y una persona corre 100 metros dando vueltas, ¿quién llegó
+                con más velocidad?</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-yellow"
+                    onclick="this.innerText='⚡ ¡Correcto! La velocidad depende de la dirección.'">El del auto (Línea
+                    recta)</button>
+                <button class="btn btn-orange"
+                    onclick="this.innerText='🔄 ¡No exactamente! La rapidez puede ser la misma, pero la velocidad cambia.'">El
+                    que da vueltas</button>
+            </div>
+            <p style="margin-top: 20px; font-style: italic;">¡La dirección importa más de lo que crees!</p>
+        </div>
+
+        <!-- Slide 4: Palabras Clave -->
+        <div class="slide" id="slide-4">
+            <h2>Vocabulario de Acción</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Rapidez</h3>
+                    <p style="font-size: 1.1rem;">Es qué tan rápido se mueve algo, sin importar hacia dónde va.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-yellow);">Velocidad</h3>
+                    <p style="font-size: 1.1rem;">Es la rapidez combinada con una dirección específica.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Reacción</h3>
+                    <p style="font-size: 1.1rem;">El tiempo que tardas en empezar a moverte tras una señal.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Main - Diferencias -->
+        <div class="slide" id="slide-5">
+            <h2>Rapidez vs Velocidad</h2>
+            <p>Aunque suenan igual, tienen una diferencia científica clave:</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 20px; font-size: 1.2rem;">🏃 <b>Rapidez:</b> Es una magnitud escalar (distancia
+                    dividida por tiempo).</p>
+                <p style="margin-bottom: 0; font-size: 1.2rem;">➡️ <b>Velocidad:</b> Es un vector (desplazamiento
+                    dividido por tiempo en una dirección).</p>
+            </div>
+        </div>
+
+        <!-- Slide 6: Contenido Main - Seguridad -->
+        <div class="slide" id="slide-6">
+            <h2>Seguridad al Correr</h2>
+            <p>Correr a máxima potencia somete a tus músculos a mucha tensión. Para evitar desgarros:</p>
+            <div
+                style="background: var(--bg-light-blue); padding: 25px; border-radius: 20px; border-left: 10px solid var(--primary-red);">
+                <ul style="text-align: left; list-style-type: '⚡'; padding-left: 20px;">
+                    <li>Realiza un calentamiento dinámico de al menos 10 minutos.</li>
+                    <li>Usa calzado adecuado con buen agarre.</li>
+                    <li>No frenes en seco; disminuye la velocidad gradualmente.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 7: Exploración Visual -->
+        <div class="slide" id="slide-7">
+            <h2>El Motor del Corredor</h2>
+            <p>Haz clic en los puntos rojos para ver qué músculos te dan el "impulso" para la velocidad.</p>
+            <div class="interactive-map"
+                style="background: url('images/exploracion.png') center/contain no-repeat; width: 400px; height: 300px;">
+                <div class="map-point" id="pt-1" style="top: 70%; left: 45%;"
+                    onclick="showInfo('pt-1', 'ISQUIOTIBIALES: Son los encargados de la tracción y el empuje al correr.')">
+                </div>
+                <div class="map-point" id="pt-2" style="top: 85%; left: 55%;"
+                    onclick="showInfo('pt-2', 'GEMELOS: Te dan el despegue explosivo desde el suelo.')"></div>
+                <div class="map-point" id="pt-3" style="top: 30%; left: 50%;"
+                    onclick="showInfo('pt-3', 'CORE: Mantiene tu cuerpo estable para no perder energía al oscilar.')">
+                </div>
+                <div id="map-info-box" class="info-box"></div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Actividad de Comprensión -->
+        <div class="slide" id="slide-8">
+            <h2>Desafío de Conceptos</h2>
+            <p>Un avión vuela a 800 km/h hacia el Norte. ¿De qué estamos hablando?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkMultipleChoice(this, true, 'fb-8')">A) De su Velocidad (porque
+                    hay una dirección).</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-8')">B) De su Rapidez (porque
+                    solo importa el número).</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-8')">C) De su Tiempo de
+                    Reacción.</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Juego Educativo - Tiempo de Reacción -->
+        <div class="slide" id="slide-9">
+            <h2>Reto de Reacción</h2>
+            <p>Cuando el semáforo cambie a color <b>VERDE</b>, haz clic rápido en el botón.</p>
+
+            <div id="light-box"
+                style="width: 150px; height: 150px; border-radius: 50%; background: #993921; margin: 20px auto; border: 5px solid #244b5a; transition: 0.3s;">
+            </div>
+
+            <button class="btn btn-blue" id="reaction-btn" onclick="checkReactionTime()">¡YA!</button>
+            <div id="fb-9" class="feedback"></div>
+            <button class="btn btn-yellow" style="display: none;" id="reset-reaction"
+                onclick="startReactionGame()">Volver a intentar</button>
+        </div>
+
+        <!-- Slide 10: Aplicación Práctica -->
+        <div class="slide" id="slide-10">
+            <h2>Técnica de Carrera</h2>
+            <p>¿Qué debes hacer con tus brazos para correr más rápido?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkTandF(true, 'fb-10')">Moverlos enérgicamente de atrás hacia
+                    adelante a 90 grados.</button>
+                <button class="option-btn" onclick="checkTandF(false, 'fb-10')">Dejarlos quietos a los lados para
+                    ahorrar energía.</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <h2>Reflexión Veloz</h2>
+            <div class="highlight-box">
+                <p style="font-style: italic;">"Hoy aprendí que la velocidad no es solo correr rápido, sino saber hacia
+                    dónde voy y cómo reaccionar a tiempo."</p>
+            </div>
+            <p style="margin-top: 20px;">¿En qué deporte crees que es más importante el tiempo de reacción?</p>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <h2>¡Meta Alcanzada!</h2>
+            <img src="images/sello.png" alt="Logro" class="badge-img">
+            <h2 style="color: var(--primary-orange); border: none;">¡Eres un Rayo!</h2>
+            <p>Has completado la Lección 5 con una rapidez increíble. ¡Sigue entrenando tu mente y tu cuerpo!</p>
+            <button class="btn btn-yellow" onclick="currentSlide=0; updateSlide();">Volver a la salida</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Specific logic for Reaction Game
+        let reactionStartTime;
+        let gameActive = false;
+
+        function startReactionGame() {
+            const light = document.getElementById('light-box');
+            const fb = document.getElementById('fb-9');
+            const reset = document.getElementById('reset-reaction');
+            const btn = document.getElementById('reaction-btn');
+
+            light.style.background = "#993921";
+            fb.style.display = "none";
+            reset.style.display = "none";
+            btn.disabled = false;
+            gameActive = false;
+
+            const randomDelay = Math.random() * 3000 + 2000; // 2-5 seconds
+            setTimeout(() => {
+                light.style.background = "#2e7d32";
+                light.style.boxShadow = "0 0 20px #2e7d32";
+                reactionStartTime = Date.now();
+                gameActive = true;
+            }, randomDelay);
+        }
+
+        function checkReactionTime() {
+            const fb = document.getElementById('fb-9');
+            const reset = document.getElementById('reset-reaction');
+            const btn = document.getElementById('reaction-btn');
+
+            if (!gameActive) {
+                fb.innerText = "¡Demasiado temprano! Espera al color verde.";
+                fb.className = "feedback error";
+                fb.style.display = "block";
+                reset.style.display = "inline-block";
+                btn.disabled = true;
+                return;
+            }
+
+            const endTime = Date.now();
+            const reactionTime = (endTime - reactionStartTime) / 1000;
+
+            fb.innerText = `¡Excelente! Reaccionaste en ${reactionTime} segundos.`;
+            fb.className = "feedback success";
+            fb.style.display = "block";
+            reset.style.display = "inline-block";
+            btn.disabled = true;
+            gameActive = false;
+        }
+
+        // Connect to slides
+        slides[8].addEventListener('animationend', () => {
+            if (slides[8].classList.contains('active')) {
+                startReactionGame();
+            }
+        });
+    </script>
+</body>
+
+</html>

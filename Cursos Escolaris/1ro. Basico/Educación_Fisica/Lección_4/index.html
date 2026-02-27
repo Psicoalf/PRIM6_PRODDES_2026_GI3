@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: Fortalecimiento Muscular - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navigation Arrows -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Diapositiva anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Diapositiva siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <h1>Flexiones, Abdominales y Sentadillas</h1>
+            <img src="images/portada.png" alt="Ejercicios de fuerza" class="slide-img">
+            <h2>Lección 4 | 1ro. Básico</h2>
+            <p>Aprenderemos a realizar los ejercicios fundamentales para fortalecer nuestro cuerpo de manera segura y
+                eficiente.</p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <h2>Objetivos de Aprendizaje</h2>
+            <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <p>🎯 1. Identificar la técnica correcta para flexiones, abdominales y sentadillas.</p>
+                <p>🎯 2. Reconocer los grupos musculares que trabaja cada ejercicio.</p>
+                <p>🎯 3. Practicar con consciencia sobre la seguridad y la postura.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <h2>¿Alguna vez has entrenado?</h2>
+            <p>¿Qué ejercicio te parece más difícil de realizar correctamente?</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-orange"
+                    onclick="this.innerText='💪 ¡Las flexiones requieren mucha fuerza de brazos!'">Flexiones</button>
+                <button class="btn btn-yellow"
+                    onclick="this.innerText='🔥 ¡Los abdominales queman pero fortalecen el core!'">Abdominales</button>
+                <button class="btn btn-blue"
+                    onclick="this.innerText='🦵 ¡Las sentadillas son la base de unas piernas fuertes!'">Sentadillas</button>
+            </div>
+            <p style="margin-top: 20px; font-style: italic;">¡Hoy aprenderás el secreto de cada uno!</p>
+        </div>
+
+        <!-- Slide 4: Palabras Clave -->
+        <div class="slide" id="slide-4">
+            <h2>Diccionario Deportivo</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Resistencia</h3>
+                    <p style="font-size: 1.1rem;">Capacidad de mantener un esfuerzo durante tiempo prolongado.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-yellow);">Postura</h3>
+                    <p style="font-size: 1.1rem;">Posición del cuerpo que evita lesiones y maximiza el esfuerzo.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Repetición</h3>
+                    <p style="font-size: 1.1rem;">Cada ejecución individual de un ejercicio completo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Main - Sentadillas -->
+        <div class="slide" id="slide-5">
+            <h2>La Sentadilla Perfecta</h2>
+            <p>La sentadilla es el ejercicio rey para las piernas. Trabaja los cuádriceps, glúteos y core.</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0; font-size: 1.2rem;">💡 <b>Regla de oro:</b> Tus rodillas nunca deben
+                    sobrepasar excesivamente la punta de tus pies y tu espalda debe estar recta.</p>
+            </div>
+        </div>
+
+        <!-- Slide 6: Contenido Main - Flexiones -->
+        <div class="slide" id="slide-6">
+            <h2>Flexiones de Brazos</h2>
+            <p>Fortalecen el pecho (pectorales), hombros y tríceps. Es fundamental mantener el cuerpo alineado como una
+                tabla.</p>
+            <div
+                style="background: var(--bg-light-blue); padding: 20px; border-radius: 15px; border: 2px dashed var(--primary-orange);">
+                <p style="margin-bottom: 0;">🔥 Si te cuesta mucho al principio, puedes apoyar las rodillas en el suelo
+                    para ganar fuerza gradualmente.</p>
+            </div>
+        </div>
+
+        <!-- Slide 7: Exploración Visual -->
+        <div class="slide" id="slide-7">
+            <h2>Zonas de Trabajo</h2>
+            <p>Toca los puntos para ver qué ejercicio activa cada zona muscular.</p>
+            <div class="interactive-map"
+                style="background: url('images/exploracion.png') center/contain no-repeat; width: 400px; height: 300px;">
+                <div class="map-point" id="pt-1" style="top: 30%; left: 50%;"
+                    onclick="showInfo('pt-1', 'ABDOMINALES: Activan el recto abdominal para la estabilidad.')"></div>
+                <div class="map-point" id="pt-2" style="top: 25%; left: 35%;"
+                    onclick="showInfo('pt-2', 'FLEXIONES: Trabajan intensamente los pectorales y brazos.')"></div>
+                <div class="map-point" id="pt-3" style="top: 75%; left: 50%;"
+                    onclick="showInfo('pt-3', 'SENTADILLAS: Los glúteos y cuádriceps son el motor principal.')"></div>
+                <div id="map-info-box" class="info-box"></div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Actividad de Comprensión -->
+        <div class="slide" id="slide-8">
+            <h2>¿Cuál es el error?</h2>
+            <p>Al hacer abdominales, ¿qué acción puede causar una lesión?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkMultipleChoice(this, true, 'fb-8')">A) Tirar del cuello con las
+                    manos con mucha fuerza.</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-8')">B) Mantener la mirada fija
+                    en el techo.</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-8')">C) Mantener los pies
+                    apoyados firmemente.</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Juego Educativo - Pasos de la Sentadilla -->
+        <div class="slide" id="slide-9">
+            <h2>El Reto de la Sentadilla</h2>
+            <p>¿Podrás ordenar los pasos para una sentadilla perfecta? Haz clic en cada uno en el orden correcto.</p>
+
+            <div id="steps-container"
+                style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 500px;">
+                <div style="display: flex; align-items: center; gap: 15px; background: white; padding: 15px; border-radius: 12px; border: 2px solid #e0e0e0; cursor: pointer; transition: 0.3s;"
+                    onclick="checkStepSequence(this, 1)">
+                    <span
+                        style="background: var(--primary-blue); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">?</span>
+                    <span style="font-weight: 600;">Separar los pies al ancho de los hombros.</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px; background: white; padding: 15px; border-radius: 12px; border: 2px solid #e0e0e0; cursor: pointer; transition: 0.3s;"
+                    onclick="checkStepSequence(this, 3)">
+                    <span
+                        style="background: var(--primary-blue); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">?</span>
+                    <span style="font-weight: 600;">Subir con fuerza manteniendo la espalda recta.</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px; background: white; padding: 15px; border-radius: 12px; border: 2px solid #e0e0e0; cursor: pointer; transition: 0.3s;"
+                    onclick="checkStepSequence(this, 2)">
+                    <span
+                        style="background: var(--primary-blue); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">?</span>
+                    <span style="font-weight: 600;">Bajar la cadera como si te fueras a sentar.</span>
+                </div>
+            </div>
+
+            <div id="fb-9" class="feedback"></div>
+            <button class="btn btn-yellow" style="display: none; margin-top: 15px;" id="reset-steps"
+                onclick="resetStepActivity()">Intentar de nuevo</button>
+        </div>
+
+        <!-- Slide 10: Aplicación Práctica -->
+        <div class="slide" id="slide-10">
+            <h2>Rutina en Casa</h2>
+            <p>Si tienes poco tiempo y quieres fortalecer todo el cuerpo, ¿qué combinación es mejor?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkTandF(true, 'fb-10')">Hacer una serie de cada ejercicio
+                    (Flexión, Abdominal, Sentadilla) con descanso.</button>
+                <button class="option-btn" onclick="checkTandF(false, 'fb-10')">Hacer solo 100 flexiones y nada
+                    más.</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <h2>¿Qué aprendiste hoy?</h2>
+            <div class="highlight-box">
+                <p style="font-style: italic;">"Hoy aprendí que no basta con moverme rápido, sino que la **técnica** es
+                    lo que me ayuda a mejorar sin lastimarme."</p>
+            </div>
+            <p style="margin-top: 20px;">¿Cuál de estos ejercicios practicarás hoy mismo?</p>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <h2>¡Reto Completado!</h2>
+            <img src="images/sello.png" alt="Logro" class="badge-img">
+            <h2 style="color: var(--primary-orange); border: none;">¡Excelente Trabajo!</h2>
+            <p>Has dominado los conceptos básicos de los ejercicios de fuerza. ¡Recuerda siempre la seguridad primero!
+            </p>
+            <button class="btn btn-yellow" onclick="currentSlide=0; updateSlide();">Volver al inicio</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

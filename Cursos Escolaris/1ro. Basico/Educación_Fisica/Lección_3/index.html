@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: Fuerza y Estiramiento - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navigation Arrows -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Diapositiva anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Diapositiva siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <h1>Conceptos de Fuerza y Estiramiento</h1>
+            <img src="images/portada.png" alt="Portada de Educación Física" class="slide-img">
+            <h2>Lección 3 | 1ro. Básico</h2>
+            <p>¡Bienvenidos a una nueva lección de Educación Física! Hoy aprenderemos a fortalecer nuestro cuerpo de
+                forma segura.</p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <h2>Objetivos de Aprendizaje</h2>
+            <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <p>🎯 1. Comprender la fuerza y cómo aplicarla correctamente.</p>
+                <p>🎯 2. Diferenciar la fuerza máxima de otros esfuerzos.</p>
+                <p>🎯 3. Aprender la importancia vital del estiramiento muscular.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <h2>¿Qué tanto sabes?</h2>
+            <p>Imagina que intentas levantar una piedra muy pesada para moverla de lugar. ¿Qué sientes en tus músculos?
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <button class="btn btn-yellow" onclick="this.innerText='💪 ¡Exacto! Sientes tensión.'">¿Sientes
+                    tensión?</button>
+                <button class="btn btn-orange" onclick="this.innerText='🔥 ¡Sí! Calor y esfuerzo.'">¿Sientes
+                    calor?</button>
+            </div>
+            <p style="margin-top: 20px; font-style: italic;">¡Eso es la fuerza en acción!</p>
+        </div>
+
+        <!-- Slide 4: Palabras Clave -->
+        <div class="slide" id="slide-4">
+            <h2>Diccionario Deportivo</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Fuerza</h3>
+                    <p style="font-size: 1.1rem;">Capacidad de vencer una resistencia externa.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-yellow);">Fuerza Máxima</h3>
+                    <p style="font-size: 1.1rem;">La mayor carga que puedes mover de una sola vez.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Estiramiento</h3>
+                    <p style="font-size: 1.1rem;">Alargar el músculo para ganar flexibilidad y seguridad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Main -->
+        <div class="slide" id="slide-5">
+            <h2>La Fuerza Máxima</h2>
+            <p>La fuerza máxima es el nivel más alto de tensión muscular que podemos generar. Se utiliza comúnmente en
+                deportes de potencia como el levantamiento de pesas.</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0; font-size: 1.3rem;">💡 No se trata de cuántas veces lo haces, sino de cuánto
+                    peso mueves en
+                    <b>una sola repetición</b> exitosa.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 6: Exploración Visual -->
+        <div class="slide" id="slide-6">
+            <h2>Explora tu Cuerpo</h2>
+            <p>Toca los puntos rojos para descubrir qué sucede al aplicar fuerza.</p>
+            <div class="interactive-map"
+                style="background: url('images/exploracion.png') center/contain no-repeat; width: 400px; height: 300px;">
+                <div class="map-point" id="point-1" style="top: 20%; left: 50%;"
+                    onclick="showInfo('point-1', 'El CORE: Mantiene el equilibrio y protege tu espalda.')"></div>
+                <div class="map-point" id="point-2" style="top: 40%; left: 30%;"
+                    onclick="showInfo('point-2', 'BÍCEPS: Se contraen con fuerza para levantar objetos.')"></div>
+                <div class="map-point" id="point-3" style="top: 70%; left: 45%;"
+                    onclick="showInfo('point-3', 'CUÁDRICEPS: Generan la potencia base desde tus piernas.')"></div>
+                <div id="map-info-box" class="info-box"></div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Actividad de Comprensión -->
+        <div class="slide" id="slide-7">
+            <h2>¿Lo has entendido?</h2>
+            <p>¿Cuál de estas acciones describe mejor la <b>Fuerza Máxima</b>?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'feedback-7')">A) Correr una
+                    maratón de 42 kilómetros.</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, true, 'feedback-7')">B) Intentar levantar
+                    una caja muy pesada una sola vez.</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'feedback-7')">C) Hacer 50 saltos
+                    de tijera rápidos.</button>
+            </div>
+            <div id="feedback-7" class="feedback"></div>
+        </div>
+
+        <!-- Slide 8: Juego Educativo -->
+        <div class="slide" id="slide-8">
+            <h2>El Orden Correcto</h2>
+            <p>Para entrenar fuerza máxima con seguridad, ¿qué paso es el final?</p>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-blue" onclick="checkOrder(3, 3, 'feedback-8')">Paso 3: Estiramiento
+                    Muscular</button>
+                <button class="btn btn-blue" onclick="checkOrder(2, 3, 'feedback-8')">Paso 2: Levantamiento</button>
+                <button class="btn btn-blue" onclick="checkOrder(1, 3, 'feedback-8')">Paso 1: Calentamiento</button>
+            </div>
+            <div id="feedback-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Aplicación Práctica -->
+        <div class="slide" id="slide-9">
+            <h2>Seguridad en Casa</h2>
+            <p>Si quieres ayudar a tus padres a mover un mueble pesado, ¿qué es lo más importante?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkTandF(true, 'feedback-9')">Tener una buena postura y haber
+                    calentado un poco.</button>
+                <button class="option-btn" onclick="checkTandF(false, 'feedback-9')">Hacerlo rápido sin pensar para
+                    terminar pronto.</button>
+            </div>
+            <div id="feedback-9" class="feedback"></div>
+        </div>
+
+        <!-- Slide 10: Repaso Final -->
+        <div class="slide" id="slide-10">
+            <h2>Repaso Rápido</h2>
+            <p>Verdadero o Falso: ¿El estiramiento solo se hace antes de empezar?</p>
+            <div style="display: flex; gap: 20px;">
+                <button class="btn btn-orange" onclick="checkTandF(false, 'feedback-10')">Verdadero</button>
+                <button class="btn btn-blue"
+                    onclick="this.innerText='¡Correcto! Se hace antes y después.'; document.getElementById('feedback-10').className='feedback success'; document.getElementById('feedback-10').innerText='¡Excelente! Se debe estirar especialmente al final.'">Falso</button>
+            </div>
+            <div id="feedback-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <h2>Reflexiona un momento</h2>
+            <p>¿Cómo crees que aplicar lo aprendido hoy te ayudará en tu vida diaria?</p>
+            <div
+                style="background: var(--bg-light-blue); border-left: 5px solid var(--primary-yellow); padding: 20px; font-style: italic;">
+                "Hoy aprendí que mi fuerza tiene un límite llamado fuerza máxima y que para no lastimarme, el
+                estiramiento es mi mejor aliado."
+            </div>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <h2>¡Lo Lograste!</h2>
+            <img src="images/sello.png" alt="Sello de logro" class="badge-img" style="margin-bottom: 30px;">
+            <p style="font-weight: bold; font-size: 1.5rem; color: var(--primary-orange);">¡Felicidades, deportista!</p>
+            <p>Has completado la Lección 3 con éxito. Ahora eres más consciente de tu cuerpo y su seguridad.</p>
+            <button class="btn btn-yellow" onclick="currentSlide=0; updateSlide();">Reiniciar Guía</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
