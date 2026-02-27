@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: Música de Cámara - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navegación -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <div class="slide-icon">🎻🎹</div>
+            <h1>Qué es la Música de Cámara</h1>
+            <h2>Pequeños Grupos, Grandes Sonidos</h2>
+            <div
+                style="background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">
+                Musica | Basicos | Lección 5
+            </div>
+            <p>¡Hola! Hoy descubriremos la música más íntima y especial: la que se toca en una "cámara" o salón pequeño.
+                🌟</p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <div class="slide-icon">🎯</div>
+            <h2>Objetivos de Aprendizaje</h2>
+            <div
+                style="text-align: left; max-width: 650px; margin: 0 auto; background: var(--bg-light-blue); padding: 30px; border-radius: 15px;">
+                <p>✅ <b>Definir</b> qué es la música de cámara y por qué es única.</p>
+                <p>✅ <b>Identificar</b> las agrupaciones más comunes (dúos, tríos, cuartetos).</p>
+                <p>✅ <b>Conocer</b> la importancia del diálogo musical sin director.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <div class="slide-icon">👥</div>
+            <h2>¿Alguna vez has platicado con música?</h2>
+            <p>Imagina que estás en una habitación con 3 amigos. No hay profesor, solo ustedes conversando. En la música
+                de cámara, ¡los instrumentos "conversan" entre sí!</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <button class="btn btn-yellow" onclick="this.innerText='🤝 ¡Exacto! Se llama diálogo musical.'">¡Suena
+                    divertido!</button>
+                <button class="btn btn-orange" onclick="this.innerText='🎻 ¡Hoy veremos cómo lo hacen!'">Quiero saber
+                    cómo</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Palabras Clave -->
+        <div class="slide" id="slide-4">
+            <div class="slide-icon">📖</div>
+            <h2>Conceptos Clave</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Cámara</h3>
+                    <p style="font-size: 1rem;">Antiguamente se refería a las habitaciones o salones de palacio.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Ensamble</h3>
+                    <p style="font-size: 1rem;">Un grupo pequeño de músicos que tocan juntos.</p>
+                </div>
+                <div class="keyword-card" style="grid-column: span 2;">
+                    <h3 style="color: var(--primary-blue);">Solapamiento</h3>
+                    <p style="font-size: 1rem;">La habilidad de los músicos de escucharse y coordinarse <b>sin
+                            director</b>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Main -->
+        <div class="slide" id="slide-5">
+            <div class="slide-icon">🏛️</div>
+            <h2>Música para Amigos</h2>
+            <p>La música de cámara nació para ser tocada en casa. A diferencia de las grandes orquestas, aquí <b>cada
+                    músico tiene su propia parte única</b>: nadie duplica a nadie.</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0;">✨ <b>Dato Curioso:</b> En el pasado, saber tocar música de cámara era
+                    esencial para ser considerado una persona educada y elegante.</p>
+            </div>
+            <p>El grupo más famoso es el <b>Cuarteto de Cuerdas</b> (2 violines, 1 viola y 1 violonchelo).</p>
+        </div>
+
+        <!-- Slide 6: Exploración Visual -->
+        <div class="slide" id="slide-6">
+            <div class="slide-icon">🔍</div>
+            <h2>Explora un Cuarteto</h2>
+            <p>Haz clic en los puntos para descubrir quién es quién en el grupo reina de la cámara.</p>
+            <div class="interactive-container">
+                <div style="font-weight: bold; color: var(--primary-blue);">EL CUARTETO DE CUERDAS</div>
+                <div class="map-point" id="pt-1" style="top: 40%; left: 30%;"
+                    onclick="showInfo('pt-1', 'PRIMER VIOLÍN: Suele llevar la melodía principal, como la voz líder.')">
+                </div>
+                <div class="map-point" id="pt-2" style="top: 40%; left: 50%;"
+                    onclick="showInfo('pt-2', 'SEGUNDO VIOLÍN y VIOLA: Rellenan la armonía y dan ritmo a la conversación.')">
+                </div>
+                <div class="map-point" id="pt-3" style="top: 60%; left: 70%;"
+                    onclick="showInfo('pt-3', 'VIOLONCHELO: Proporciona la base profunda y el sostén de todo el grupo.')">
+                </div>
+            </div>
+            <div id="map-info-box" class="info-box"></div>
+        </div>
+
+        <!-- Slide 7: Actividad de Comprensión -->
+        <div class="slide" id="slide-7">
+            <div class="slide-icon">✅</div>
+            <h2>¿Cuál es el tamaño ideal?</h2>
+            <p>¿Qué característica define mejor a un grupo de música de cámara?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkMultipleChoice(this, true, 'fb-7')">A) Un grupo pequeño de
+                    músicos (2 a 9 personas).</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-7')">B) Una orquesta de 150
+                    músicos con coro.</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-7')">C) Un solista tocando solo
+                    en el desierto.</button>
+            </div>
+            <div id="fb-7" class="feedback"></div>
+        </div>
+
+        <!-- Slide 8: Juego Educativo -->
+        <div class="slide" id="slide-8">
+            <div class="slide-icon">🎮</div>
+            <h2>Nombra los Grupos</h2>
+            <p>Haz clic en los botones para identificar cuántos músicos hay:</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <button class="btn btn-blue" onclick="checkEnsemble('duo', 'fb-8')">Dúo (2)</button>
+                <button class="btn btn-blue" onclick="checkEnsemble('trio', 'fb-8')">Trío (3)</button>
+                <button class="btn btn-blue" onclick="checkEnsemble('cuarteto', 'fb-8')">Cuarteto (4)</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Aplicación Práctica -->
+        <div class="slide" id="slide-9">
+            <div class="slide-icon">🌟</div>
+            <h2>¿Dónde suena mejor?</h2>
+            <p>Si tuvieras que organizar un concierto de música de cámara, ¿cuál elegirías?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkTandF(true, 'fb-9')">Un salón acogedor o una pequeña sala de
+                    conciertos.</button>
+                <button class="option-btn" onclick="checkTandF(false, 'fb-9')">Un estadio de fútbol con 50,000
+                    personas.</button>
+            </div>
+            <div id="fb-9" class="feedback"></div>
+        </div>
+
+        <!-- Slide 10: Repaso Final -->
+        <div class="slide" id="slide-10">
+            <div class="slide-icon">📝</div>
+            <h2>Repaso Rápido</h2>
+            <p>¿Es cierto que la música de cámara necesita un <b>director con batuta</b> frente a ellos?</p>
+            <div style="display: flex; gap: 20px;">
+                <button class="option-btn" onclick="checkTandF(false, 'fb-10')">Verdadero</button>
+                <button class="option-btn" onclick="checkTandF(true, 'fb-10')">Falso (Se coordinan entre ellos)</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <div class="slide-icon">🧠</div>
+            <h2>Reflexiona</h2>
+            <p>¿Qué cualidad crees que es más importante para un músico de cámara?</p>
+            <div
+                style="background: var(--bg-light-blue); border-left: 5px solid var(--primary-yellow); padding: 20px; font-style: italic; text-align: left;">
+                "Aprendí que la música de cámara es como una gran amistad: requiere escucharse, respetarse y trabajar
+                juntos para crear algo hermoso."
+            </div>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <div class="slide-icon">🏆</div>
+            <h2>¡Músico de Cámara Graduado!</h2>
+            <div style="color: var(--primary-orange); font-size: 2rem; font-weight: bold; margin-bottom: 10px;">
+                ¡Excelente!</div>
+            <p>Ahora sabes que no siempre se necesita una orquesta gigante para hacer música poderosa. ¡La magia ocurre
+                en los grupos pequeños!</p>
+            <button class="btn btn-yellow" onclick="currentSlide=0; updateSlide();">Volver a Empezar</button>
+        </div>
+
+        <!-- Progreso -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

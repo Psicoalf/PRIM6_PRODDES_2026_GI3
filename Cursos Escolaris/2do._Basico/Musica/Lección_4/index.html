@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: Música del Siglo XIX - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navigation Arrows -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Diapositiva anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Diapositiva siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <div style="font-size: 5rem; margin-bottom: 20px;">🎻</div>
+            <h1>Música del Siglo XIX</h1>
+            <h2>La Explosión del Romanticismo</h2>
+            <div
+                style="background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">
+                Musica | Basicos | Lección 4
+            </div>
+            <p>¡Hola! Entramos a un siglo de pasión, leyendas y grandes emociones. ¿Estás listo para el Romanticismo? 🔥
+            </p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🎯</div>
+            <h2>Objetivos de Aprendizaje</h2>
+            <div
+                style="text-align: left; max-width: 650px; margin: 0 auto; background: var(--bg-light-blue); padding: 30px; border-radius: 15px;">
+                <p>✅ <b>Reconocer</b> el sentimiento y la libertad como ejes del Siglo XIX.</p>
+                <p>✅ <b>Identificar</b> el concepto de "Virtuoso" y grandes compositores románticos.</p>
+                <p>✅ <b>Comprender</b> cómo la orquesta se volvió más grande y poderosa.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <div style="font-size: 3rem; margin-bottom: 10px;">❤️</div>
+            <h2>Música y Emociones</h2>
+            <p>¿Alguna vez has sentido que una canción cuenta exactamente cómo te sientes por dentro?</p>
+            <p>En el siglo XIX, los músicos dejaron de lado las reglas estrictas para dejar que su <b>corazón</b> guiara
+                la composición.</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <button class="btn btn-yellow" onclick="this.innerText='🎹 ¡Eso es ser un Romántico!'">¡A veces me
+                    pasa!</button>
+                <button class="btn btn-orange" onclick="this.innerText='🎶 ¡Lo sentirás en esta lección!'">Quiero saber
+                    más</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Palabras Clave -->
+        <div class="slide" id="slide-4">
+            <div style="font-size: 3rem; margin-bottom: 10px;">📖</div>
+            <h2>Conceptos Clave</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Romanticismo</h3>
+                    <p style="font-size: 1rem;">Movimiento que valora la emoción, la naturaleza y la libertad
+                        individual.</p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Virtuosismo</h3>
+                    <p style="font-size: 1rem;">Habilidad técnica extraordinaria en un instrumento (como tocar
+                        rapidísimo).</p>
+                </div>
+                <div class="keyword-card" style="grid-column: span 2;">
+                    <h3 style="color: var(--primary-blue);">Música Programática</h3>
+                    <p style="font-size: 1rem;">Música que intenta contar una historia o describir un paisaje sin usar
+                        palabras.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Main -->
+        <div class="slide" id="slide-5">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🎹</div>
+            <h2>El Culto al Genio</h2>
+            <p>Aparecen las primeras "estrellas de rock" de la música clásica: los <b>Virtuosos</b>. Músicos como
+                <b>Franz
+                    Liszt</b> (piano) o <b>Paganini</b> (violín) tenían clubs de fans y llenaban estadios.</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0;">✨ <b>El Piano Moderno:</b> Durante este siglo, el piano alcanzó su forma
+                    final, volviéndose el instrumento favorito de los hogares y teatros.</p>
+            </div>
+            <p>También nació el <b>Nacionalismo</b>: músicos componiendo piezas inspiradas en las leyendas y bailes de
+                su propio país.</p>
+        </div>
+
+        <!-- Slide 6: Exploración Visual -->
+        <div class="slide" id="slide-6">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🎺</div>
+            <h2>La Gran Orquesta Romántica</h2>
+            <p>La orquesta creció hasta tener más de 100 músicos. Haz clic para ver los nuevos sonidos.</p>
+            <div class="interactive-container">
+                <div style="text-align: center; font-size: 1.2rem; color: var(--primary-blue); font-weight: bold;">
+                    EVOLUCIÓN SONORA
+                </div>
+                <div class="map-point" id="pt-1" style="top: 20%; left: 30%;"
+                    onclick="showInfo('pt-1', 'La TUBA y el TROMBÓN: Añadieron un sonido heroico y profundo.')"></div>
+                <div class="map-point" id="pt-2" style="top: 30%; left: 70%;"
+                    onclick="showInfo('pt-2', 'El FLAUTÍN (Piccolo): Capaz de brillar por encima de toda la orquesta.')">
+                </div>
+                <div class="map-point" id="pt-3" style="top: 70%; left: 50%;"
+                    onclick="showInfo('pt-3', 'EL PIANO: Se integra a menudo como solista principal en grandes conciertos.')">
+                </div>
+            </div>
+            <div id="map-info-box" class="info-box"></div>
+        </div>
+
+        <!-- Slide 7: Actividad de Comprensión -->
+        <div class="slide" id="slide-7">
+            <div style="font-size: 3rem; margin-bottom: 10px;">✅</div>
+            <h2>¿Cuál era la meta del músico romántico?</h2>
+            <p>¿Qué era lo más importante para un compositor en el siglo XIX?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkMultipleChoice(this, true, 'fb-7')">A) Expresar sus
+                    sentimientos y emociones personales.</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-7')">B) Seguir las reglas
+                    matemáticas de la música antigua.</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-7')">C) Componer música solo
+                    para que la gente duerma.</button>
+            </div>
+            <div id="fb-7" class="feedback"></div>
+        </div>
+
+        <!-- Slide 8: Juego Educativo -->
+        <div class="slide" id="slide-8">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🎮</div>
+            <h2>Maestros del Sentimiento</h2>
+            <p>Haz clic en cada nombre para conocer su gran aporte:</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <button class="btn btn-blue" onclick="checkOrder(1, 3, 'fb-8')">Chopin (Piano)</button>
+                <button class="btn btn-blue" onclick="checkOrder(2, 3, 'fb-8')">Verdi (Ópera)</button>
+                <button class="btn btn-blue" onclick="checkOrder(3, 3, 'fb-8')">Tchaikovsky (Ballet)</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+        </div>
+
+        <!-- Slide 9: Aplicación Práctica -->
+        <div class="slide" id="slide-9">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🎬</div>
+            <h2>El Cine y el Siglo XIX</h2>
+            <p>¿Sabías que la música de películas como *Star Wars* o *Harry Potter* usa el estilo del Siglo XIX?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkTandF(true, 'fb-9')">Cierto, usan grandes orquestas para crear
+                    mucha emoción.</button>
+                <button class="option-btn" onclick="checkTandF(false, 'fb-9')">Falso, en el cine solo se usa música
+                    electrónica moderna.</button>
+            </div>
+            <div id="fb-9" class="feedback"></div>
+        </div>
+
+        <!-- Slide 10: Repaso Final -->
+        <div class="slide" id="slide-10">
+            <div style="font-size: 3rem; margin-bottom: 10px;">📝</div>
+            <h2>Repaso Rápido</h2>
+            <p>¿Es cierto que en el siglo XIX los músicos valoraban la <b>originalidad</b> por encima de la tradición?
+            </p>
+            <div style="display: flex; gap: 20px;">
+                <button class="option-btn" onclick="checkTandF(true, 'fb-10')">Verdadero (Querían ser únicos)</button>
+                <button class="option-btn" onclick="checkTandF(false, 'fb-10')">Falso (Querían sonar todos
+                    igual)</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🧠</div>
+            <h2>Reflexiona un momento</h2>
+            <p>Si fueras un compositor romántico, ¿qué emoción le pondrías a tu primera obra?</p>
+            <div
+                style="background: var(--bg-light-blue); border-left: 5px solid var(--primary-yellow); padding: 20px; font-style: italic; text-align: left;">
+                "Hoy aprendí que en el siglo XIX la música se liberó, se volvió gigantesca y puso al ser humano y sus
+                sentimientos en el centro de todo."
+            </div>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <div style="font-size: 5rem; margin-bottom: 20px;">🚩</div>
+            <h2>¡Increíble Trabajo!</h2>
+            <div style="color: var(--primary-orange); font-size: 2rem; font-weight: bold; margin-bottom: 10px;">¡Eres un
+                Experto Romántico!</div>
+            <p>Has completado la Lección 4. Ahora sabes que detrás de cada gran banda sonora o melodía apasionada, está
+                el legado del siglo XIX.</p>
+            <button class="btn btn-yellow" onclick="currentSlide=0; updateSlide();">Reiniciar Aventura</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

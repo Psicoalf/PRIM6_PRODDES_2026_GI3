@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: Música del Siglo XVIII - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="presentation-container">
+        <!-- Navigation Arrows -->
+        <button class="nav-arrow prev" onclick="prevSlide()" aria-label="Diapositiva anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="nextSlide()" aria-label="Diapositiva siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+        </button>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide-1">
+            <div style="font-size: 5rem; margin-bottom: 20px;">🎼</div>
+            <h1>Música del Siglo XVIII</h1>
+            <h2>La Era de la Razón y la Armonía</h2>
+            <div
+                style="background: var(--primary-orange); color: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; margin-bottom: 20px;">
+                Musica | Basicos | Lección 3
+            </div>
+            <p>¡Hola! Hoy exploraremos el siglo donde la música se volvió elegante, equilibrada y ¡simplemente
+                brillante! 🌟</p>
+        </div>
+
+        <!-- Slide 2: Objetivos -->
+        <div class="slide" id="slide-2">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🎯</div>
+            <h2>Objetivos de Aprendizaje</h2>
+            <div
+                style="text-align: left; max-width: 650px; margin: 0 auto; background: var(--bg-light-blue); padding: 30px; border-radius: 15px;">
+                <p>✅ <b>Comprender</b> los eventos clave que definieron la música en el siglo XVIII.</p>
+                <p>✅ <b>Identificar</b> a los grandes maestros: Haydn, Mozart y Beethoven.</p>
+                <p>✅ <b>Reconocer</b> la formación de la Orquesta Sinfónica moderna.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Activación -->
+        <div class="slide" id="slide-3">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🤔</div>
+            <h2>¿Sabías que...?</h2>
+            <p>En el siglo XVIII, la música ya no solo se escuchaba en iglesias o palacios privados. ¡Nacieron los
+                primeros conciertos públicos!</p>
+            <p>¿Has escuchado alguna vez una melodía que te haga sentir orden y alegría al mismo tiempo?</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <button class="btn btn-yellow" onclick="this.innerText='🎹 ¡Genial! Ese es el estilo Clásico.'">¡Sí, me
+                    encanta!</button>
+                <button class="btn btn-orange" onclick="this.innerText='🎻 ¡Hoy descubrirás por qué!'">No estoy
+                    seguro...</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Palabras Clave -->
+        <div class="slide" id="slide-4">
+            <div style="font-size: 3rem; margin-bottom: 10px;">📖</div>
+            <h2>Conceptos Clave</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-orange);">Clasicismo</h3>
+                    <p style="font-size: 1rem;">Estilo musical que busca la claridad, el orden y la elegancia natural.
+                    </p>
+                </div>
+                <div class="keyword-card">
+                    <h3 style="color: var(--primary-red);">Sinfonía</h3>
+                    <p style="font-size: 1rem;">Gran obra musical para ser tocada por una orquesta completa.</p>
+                </div>
+                <div class="keyword-card" style="grid-column: span 2;">
+                    <h3 style="color: var(--primary-blue);">Pianoforte</h3>
+                    <p style="font-size: 1rem;">El antepasado del piano actual, capaz de sonar suave (piano) o fuerte
+                        (forte).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Contenido Main -->
+        <div class="slide" id="slide-5">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🏛️</div>
+            <h2>El Siglo de las Luces</h2>
+            <p>Durante este siglo, el mundo cambió (Ilustración). La música dejó atrás los excesos decorativos del
+                Barroco para buscar la <b>belleza en la sencillez</b>.</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0;">✨ <b>Dato Importante:</b> Viena (Austria) se convirtió en la capital
+                    mundial de la música, donde todos los genios querían vivir y trabajar.</p>
+            </div>
+            <p>Aparecen estructuras como la <b>Sonata</b>, que permitían a los músicos organizar sus ideas de forma
+                lógica.</p>
+        </div>
+
+        <!-- Slide 6: Exploración Visual -->
+        <div class="slide" id="slide-6">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🎻</div>
+            <h2>La Orquesta Sinfónica</h2>
+            <p>Haz clic en las secciones para explorar la orquesta del siglo XVIII.</p>
+            <div class="interactive-container">
+                <div style="text-align: center; font-size: 1.2rem; color: var(--primary-blue); font-weight: bold;">
+                    ESTRUCTURA DE LA ORQUESTA
+                </div>
+                <div class="map-point" id="pt-1" style="top: 70%; left: 50%;"
+                    onclick="showInfo('pt-1', 'CUERDAS: Violines, Violas, Chelos y Contrabajos. Son el corazón de la orquesta.')">
+                </div>
+                <div class="map-point" id="pt-2" style="top: 40%; left: 50%;"
+                    onclick="showInfo('pt-2', 'MADERAS: Flautas, Oboes y el nuevo CLARINETE, que Mozart amaba.')"></div>
+                <div class="map-point" id="pt-3" style="top: 25%; left: 35%;"
+                    onclick="showInfo('pt-3', 'METALES: Trompetas y Trompas que daban potencia a los finales.')"></div>
+                <div class="map-point" id="pt-4" style="top: 20%; left: 65%;"
+                    onclick="showInfo('pt-4', 'PERCUSIÓN: Principalmente los Timbales, marcando el ritmo con fuerza.')">
+                </div>
+            </div>
+            <div id="map-info-box" class="info-box"></div>
+        </div>
+
+        <!-- Slide 7: Actividad de Comprensión -->
+        <div class="slide" id="slide-7">
+            <div style="font-size: 3rem; margin-bottom: 10px;">✅</div>
+            <h2>¿Cuál es el estilo principal?</h2>
+            <p>¿Qué estilo artístico dominó la mayor parte de la música del siglo XVIII, buscando orden e iluminación?
+            </p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-7')">A) Barroco Temprano
+                    (Exceso y adornos)</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, true, 'fb-7')">B) Clasicismo (Claridad y
+                    equilibrio)</button>
+                <button class="option-btn" onclick="checkMultipleChoice(this, false, 'fb-7')">C) Romanticismo (Drama
+                    exagerado)</button>
+            </div>
+            <div id="fb-7" class="feedback"></div>
+        </div>
+
+        <!-- Slide 8: Juego Educativo -->
+        <div class="slide" id="slide-8">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🎮</div>
+            <h2>Los Tres Grandes de Viena</h2>
+            <p>Haz clic en cada genio para conocer su orden de aparición histórica:</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <button class="btn btn-blue" onclick="checkOrder(1, 3, 'fb-8')">Haydn (1732)</button>
+                <button class="btn btn-blue" onclick="checkOrder(2, 3, 'fb-8')">Mozart (1756)</button>
+                <button class="btn btn-blue" onclick="checkOrder(3, 3, 'fb-8')">Beethoven (1770)</button>
+            </div>
+            <div id="fb-8" class="feedback"></div>
+            <p style="margin-top:20px; font-size: 0.9rem;">(Dato: Beethoven fue el puente hacia un nuevo siglo)</p>
+        </div>
+
+        <!-- Slide 9: Aplicación Práctica -->
+        <div class="slide" id="slide-9">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🌟</div>
+            <h2>La Música en la Sociedad</h2>
+            <p>Si fueras un músico en 1780, ¿dónde trabajarías con más probabilidad?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="checkTandF(true, 'fb-9')">En una corte real o en un teatro de ópera
+                    público.</button>
+                <button class="option-btn" onclick="checkTandF(false, 'fb-9')">Grabando discos en un estudio
+                    digital.</button>
+            </div>
+            <div id="fb-9" class="feedback"></div>
+        </div>
+
+        <!-- Slide 10: Repaso Final -->
+        <div class="slide" id="slide-10">
+            <div style="font-size: 3rem; margin-bottom: 10px;">📝</div>
+            <h2>Repaso Rápido</h2>
+            <p>¿Es cierto que la <b>Sinfonía</b> es una obra pequeña para un solo instrumento?</p>
+            <div style="display: flex; gap: 20px;">
+                <button class="option-btn" onclick="checkTandF(false, 'fb-10')">Verdadero</button>
+                <button class="option-btn" onclick="checkTandF(true, 'fb-10')">Falso (Es para toda la orquesta)</button>
+            </div>
+            <div id="fb-10" class="feedback"></div>
+        </div>
+
+        <!-- Slide 11: Metacognición -->
+        <div class="slide" id="slide-11">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🧠</div>
+            <h2>Reflexiona un momento</h2>
+            <p>¿Qué parte de la música del siglo XVIII te pareció más interesante?</p>
+            <div
+                style="background: var(--bg-light-blue); border-left: 5px solid var(--primary-yellow); padding: 20px; font-style: italic; text-align: left;">
+                "Hoy aprendí que el siglo XVIII fue una época de cambios, donde la música buscó el orden y nacieron las
+                grandes orquestas que disfrutamos hoy."
+            </div>
+        </div>
+
+        <!-- Slide 12: Cierre -->
+        <div class="slide" id="slide-12">
+            <div style="font-size: 5rem; margin-bottom: 20px;">🏆</div>
+            <h2>¡Felicidades, Maestro!</h2>
+            <div style="color: var(--primary-orange); font-size: 2rem; font-weight: bold; margin-bottom: 10px;">¡Misión
+                Cumplida!</div>
+            <p>Ahora conoces los secretos de la música del siglo XVIII. Eres capaz de identificar a Mozart, Haydn y
+                Beethoven, y sabes cómo suena el orden clásico.</p>
+            <button class="btn btn-yellow" onclick="currentSlide=0; updateSlide();">Reiniciar Aprendizaje</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
