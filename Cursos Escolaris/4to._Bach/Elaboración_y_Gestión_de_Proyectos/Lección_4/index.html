@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: Objetivos similares - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides-wrapper">
+            <!-- 1. PORTADA -->
+            <section class="slide">
+                <div class="portada-content">
+                    <span class="materia">Elaboración y Gestión de Proyectos</span>
+                    <h1>Objetivos similares</h1>
+                    <p style="font-weight: bold; color: var(--azul-oscuro);">Parecidos pero no iguales</p>
+                    <div style="font-size: 8rem; margin: 30px 0;">🔍</div>
+                    <p>Lección 4 • Bachillerato</p>
+                    <p>Hoy aprenderás a distinguir entre los grandes planes y los proyectos concretos, y a definir el
+                        propósito real de tu propuesta.</p>
+                </div>
+            </section>
+
+            <!-- 2. OBJETIVOS -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Objetivos de Aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li><span>📂</span> Definir qué es un proyecto y sus características clave.</li>
+                        <li><span>⚖️</span> Diferenciar con claridad entre plan, programa y proyecto.</li>
+                        <li><span>🎯</span> Identificar y redactar los propósitos de tu propio proyecto.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. ACTIVACIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Es lo mismo?</h2>
+                    <p>Imagina que el gobierno quiere "Mejorar la educación en el país". ¿Qué crees que sea esto?</p>
+                    <div class="grid-cards">
+                        <div class="card"
+                            onclick="explore('act', '¡Buen intento! Pero esto es demasiado grande para ser un proyecto. Es un <b>Plan</b>, una visión a largo plazo.')">
+                            <span class="icon">🗺️</span>
+                            <h3>Un Proyecto</h3>
+                            <p>Algo que se termina en una semana.</p>
+                        </div>
+                        <div class="card"
+                            onclick="explore('act', '¡Exacto! Es una visión estratégica general que guiará muchas otras acciones menores.')">
+                            <span class="icon">🏛️</span>
+                            <h3>Una Visión General</h3>
+                            <p>Un objetivo nacional a 10 años.</p>
+                        </div>
+                    </div>
+                    <div id="explorer-info-act" style="margin-top: 20px; font-style: italic;">Haz clic en una opción
+                        para reflexionar.</div>
+                </div>
+            </section>
+
+            <!-- 4. PALABRAS CLAVE -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Conceptos Base</h2>
+                    <div class="grid-cards">
+                        <div class="card no-hover">
+                            <span class="icon">📦</span>
+                            <h3>Proyecto</h3>
+                            <p>Esfuerzo temporal para crear un resultado único.</p>
+                        </div>
+                        <div class="card no-hover">
+                            <span class="icon">📈</span>
+                            <h3>Plan</h3>
+                            <p>Marco general de decisiones estratégicas.</p>
+                        </div>
+                        <div class="card no-hover">
+                            <span class="icon">🧩</span>
+                            <h3>Programa</h3>
+                            <p>Conjunto de proyectos que buscan un mismo fin.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO: DEFINICIÓN DE PROYECTO -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Qué es un Proyecto?</h2>
+                    <p>No todo trabajo es un proyecto. Un proyecto tiene tres "patas" fundamentales:</p>
+                    <div style="display: flex; gap: 20px; width: 100%; max-width: 800px;">
+                        <div style="flex:1; background: #fff8e1; border-radius: 20px; padding: 20px;">
+                            <h3 style="color: var(--naranja);">Temporal</h3>
+                            <p style="font-size: 1rem;">Tiene un inicio y un final definido.</p>
+                        </div>
+                        <div style="flex:1; background: #e3f2fd; border-radius: 20px; padding: 20px;">
+                            <h3 style="color: var(--azul-oscuro);">Único</h3>
+                            <p style="font-size: 1rem;">No es una rutina; crea algo nuevo.</p>
+                        </div>
+                        <div style="flex:1; background: #e8f5e9; border-radius: 20px; padding: 20px;">
+                            <h3 style="color: #2e7d32;">Propósito</h3>
+                            <p style="font-size: 1rem;">Busca resolver un problema específico.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CONTENIDO: DIFERENCIAS (PLAN vs PROG vs PROY) -->
+            <section class="slide">
+                <div class="content">
+                    <h2>La Jerarquía del Éxito</h2>
+                    <p>De lo general a lo particular:</p>
+                    <div
+                        style="text-align: left; background: var(--fondo-claro); padding: 30px; border-radius: 25px; border: 2px dashed var(--dorado);">
+                        <p><b>1. PLAN:</b> "Salud para todos 2030" (Nivel Nacional)</p>
+                        <p><b>2. PROGRAMA:</b> "Vacunación infantil en el norte" (Nivel Regional)</p>
+                        <p><b>3. PROYECTO:</b> "Construcción del centro de salud en la Aldea X" (Nivel Local/Acción)</p>
+                    </div>
+                    <p style="margin-top: 20px; font-weight: bold;">El proyecto es la unidad mínima de ejecución.</p>
+                </div>
+            </section>
+
+            <!-- 7. EXPLORACIÓN VISUAL: PROPÓSITOS -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Identifica el Propósito</h2>
+                    <p>¿Para qué sirve tu proyecto? Haz clic para ver las dimensiones:</p>
+                    <div class="explorer-stage">
+                        <div class="explorer-nav">
+                            <button class="explorer-btn"
+                                onclick="explore('prop-1', '<b>Dimensión Social:</b> ¿Cómo mejora la vida de las personas o su convivencia?')">Social</button>
+                            <button class="explorer-btn"
+                                onclick="explore('prop-2', '<b>Dimensión Económica:</b> ¿Genera ahorros, ingresos o aprovecha mejor los recursos?')">Económica</button>
+                            <button class="explorer-btn"
+                                onclick="explore('prop-3', '<b>Dimensión Ambiental:</b> ¿Cómo protege el entorno o reduce el impacto negativo?')">Ambiental</button>
+                        </div>
+                        <div id="explorer-info-box" class="explorer-info">
+                            Toca una dimensión para entender su enfoque.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. ACTIVIDAD DE COMPRENSIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Proyecto o Rutina?</h2>
+                    <p>De las siguientes acciones, ¿cuál cumple con ser un <b>Proyecto</b>?</p>
+                    <div class="options-container" id="q1-container">
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'Limpiar la casa es una tarea rutinaria y repetitiva, no es un esfuerzo único con un resultado final distinto cada vez.', 'q1-feedback', 'q1-retry')">Limpiar
+                            la casa todos los sábados.</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, true, '¡Correcto! Crear una aplicación tiene un inicio, un fin y resulta en un producto único.', 'q1-feedback', 'q1-retry')">Diseñar
+                            y programar una nueva App de estudio.</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'Ir a clases es parte de un programa educativo continuo, no es un proyecto individual por sí mismo.', 'q1-feedback', 'q1-retry')">Asistir
+                            a clases de matemáticas.</button>
+                    </div>
+                    <div id="q1-feedback" class="feedback-overlay"></div>
+                    <div class="retry-container" id="q1-retry">
+                        <button class="btn-retry"
+                            onclick="resetQuestion('q1-container', 'q1-feedback', 'q1-retry')">Intentar de
+                            nuevo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. JUEGO EDUCATIVO -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Desafío de Jerarquía</h2>
+                    <p>Relaciona cada nivel con su ejemplo correspondiente.</p>
+                    <div class="match-game">
+                        <div class="column" id="col-levels">
+                            <div class="match-item" data-match="PLAN" onclick="handleMatch(this)">Plan</div>
+                            <div class="match-item" data-match="PROG" onclick="handleMatch(this)">Programa</div>
+                            <div class="match-item" data-match="PROY" onclick="handleMatch(this)">Proyecto</div>
+                        </div>
+                        <div class="column" id="col-ex">
+                            <div class="match-item" data-match="PROY" onclick="handleMatch(this)">Reforestar el parque
+                                local</div>
+                            <div class="match-item" data-match="PLAN" onclick="handleMatch(this)">Estrategia Nacional
+                                Ambiental</div>
+                            <div class="match-item" data-match="PROG" onclick="handleMatch(this)">Recuperación de áreas
+                                verdes</div>
+                        </div>
+                    </div>
+                    <div id="match-feedback" class="feedback-overlay"></div>
+                    <div style="margin-top: 20px;">
+                        <button class="btn-retry" onclick="resetMatchGame()">Reiniciar Juego</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. APLICACIÓN PRÁCTICA -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Redactando Propósitos</h2>
+                    <div class="meta-box" style="background: var(--dorado); color: var(--azul-oscuro);">
+                        <p><b>Reto:</b> Quieres crear un sistema de reciclaje en el colegio.</p>
+                        <p>¿Cuál sería el propósito <b>más claro y directo</b>?</p>
+                    </div>
+                    <div class="options-container" id="case-container" style="margin-top: 20px;">
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, true, '¡Excelente! Es específico y ataca directamente la necesidad identificada.', 'case-feedback', 'case-retry')">Reducir
+                            el desperdicio de plástico en un 50% durante el año escolar.</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'Eso es muy vago. Un propósito debe indicar qué se quiere lograr exactamente.', 'case-feedback', 'case-retry')">Hacer
+                            que el colegio se vea más bonito y limpio.</button>
+                    </div>
+                    <div id="case-feedback" class="feedback-overlay"></div>
+                    <div class="retry-container" id="case-retry">
+                        <button class="btn-retry"
+                            onclick="resetQuestion('case-container', 'case-feedback', 'case-retry')">Intentar de
+                            nuevo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. REPASO FINAL -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Diferencias Clave</h2>
+                    <div class="grid-cards">
+                        <div class="card no-hover" style="border-left: 10px solid var(--dorado);">
+                            <h4>Plan</h4>
+                            <p style="font-size: 0.9rem;">¿Qué queremos ser? (Estratégico)</p>
+                        </div>
+                        <div class="card no-hover" style="border-left: 10px solid var(--naranja);">
+                            <h4>Programa</h4>
+                            <p style="font-size: 0.9rem;">¿Hacia dónde vamos? (Táctico)</p>
+                        </div>
+                        <div class="card no-hover" style="border-left: 10px solid var(--azul-oscuro);">
+                            <h4>Proyecto</h4>
+                            <p style="font-size: 0.9rem;">¿Qué haremos hoy? (Operativo)</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 30px;">¡No los confundas! Cada uno tiene su lugar en la gestión.</p>
+                </div>
+            </section>
+
+            <!-- 12. CIERRE -->
+            <section class="slide">
+                <div class="portada-content">
+                    <div style="font-size: 6rem;">🏆</div>
+                    <h1>¡Objetivo Logrado!</h1>
+                    <p>Ahora sabes que aunque parezcan iguales, los planes, programas y proyectos tienen escalas y
+                        alcances muy distintos.</p>
+                    <p style="color: var(--naranja); font-weight: bold;">¡Estás listo para definir el propósito de tu
+                        propia idea!</p>
+                    <div style="margin-top: 40px; font-weight: bold; letter-spacing: 5px;">COLEGIO ESCOLARIS</div>
+                    <button class="option-btn" style="margin-top: 20px;" onclick="goToSlide(0)">Volver al
+                        Inicio</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

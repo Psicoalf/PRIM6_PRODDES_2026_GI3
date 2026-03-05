@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: ¿Qué quiero hacer? - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <!-- Botones de Navegación -->
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides-wrapper">
+            <!-- 1. PORTADA -->
+            <section class="slide">
+                <div class="portada-content">
+                    <span class="materia">Elaboración y Gestión de Proyectos</span>
+                    <h1>¿Qué quiero hacer?</h1>
+                    <p style="font-weight: bold; color: var(--azul-oscuro);">Lección 3 • Bachillerato</p>
+                    <div style="font-size: 8rem; margin: 30px 0;">🎯</div>
+                    <p>¡Bienvenido! Hoy aprenderás a transformar tus ideas en proyectos reales, identificando
+                        necesidades y buscando el apoyo necesario.</p>
+                </div>
+            </section>
+
+            <!-- 2. OBJETIVOS -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Objetivos de Aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li><span>📊</span> Crear un diagrama de proceso para identificar y priorizar necesidades.</li>
+                        <li><span>💰</span> Evaluar las diferentes formas de obtener financiamiento.</li>
+                        <li><span>🗣️</span> Explicar qué es el cabildeo, sus funciones y modalidades.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. ACTIVACIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Pensemos un momento...</h2>
+                    <p>Si tuvieras que mejorar algo en tu comunidad educativa hoy mismo, ¿qué elegirías?</p>
+                    <div class="grid-cards">
+                        <div class="card"
+                            onclick="explore('act', '¡Excelente elección! Para lograrlo, primero debemos entender si es una <b>necesidad urgente</b> o un deseo secundario.')">
+                            <span class="icon">💻</span>
+                            <h3>Tecnología</h3>
+                            <p>Más computadoras o mejor internet.</p>
+                        </div>
+                        <div class="card"
+                            onclick="explore('act', '¡Muy importante! El bienestar y el deporte son claves, pero ¿cómo conseguiremos los recursos?')">
+                            <span class="icon">🏀</span>
+                            <h3>Deporte</h3>
+                            <p>Nuevas canchas o implementos.</p>
+                        </div>
+                    </div>
+                    <div id="explorer-info-act" style="margin-top: 20px; font-style: italic;">Haz clic en una opción
+                        para reflexionar.</div>
+                </div>
+            </section>
+
+            <!-- 4. PALABRAS CLAVE -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Palabras que debes conocer</h2>
+                    <div class="grid-cards">
+                        <div class="card">
+                            <span class="icon">🔝</span>
+                            <h3>Priorización</h3>
+                            <p>Ordenar las necesidades según su importancia y urgencia.</p>
+                        </div>
+                        <div class="card">
+                            <span class="icon">🏦</span>
+                            <h3>Financiamiento</h3>
+                            <p>Obtención de los recursos económicos necesarios para el proyecto.</p>
+                        </div>
+                        <div class="card">
+                            <span class="icon">🤝</span>
+                            <h3>Cabildeo</h3>
+                            <p>Acciones para influir en decisiones de personas con poder (lobbying).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO PRINCIPAL: IDENTIFICACIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>1. Identificar y Priorizar</h2>
+                    <p>No podemos hacerlo todo al mismo tiempo. Sigue este proceso:</p>
+                    <div
+                        style="display: flex; gap: 20px; align-items: center; background: #fff8e1; padding: 20px; border-radius: 20px;">
+                        <div style="background: var(--naranja); color: white; padding: 15px; border-radius: 10px;">
+                            Lluvia de Ideas</div>
+                        <span>➡️</span>
+                        <div
+                            style="background: var(--dorado); color: var(--azul-oscuro); padding: 15px; border-radius: 10px;">
+                            Análisis de Viabilidad</div>
+                        <span>➡️</span>
+                        <div style="background: var(--azul-oscuro); color: white; padding: 15px; border-radius: 10px;">
+                            Selección Final</div>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 1rem;"><i>Tip: Priorizamos lo que tiene mayor impacto con los
+                            recursos que ya tenemos.</i></p>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO PRINCIPAL: FINANCIAMIENTO -->
+            <section class="slide">
+                <div class="content">
+                    <h2>2. ¿De dónde sale el dinero?</h2>
+                    <p>Existen diversas fuentes de financiamiento para un proyecto:</p>
+                    <div class="grid-cards">
+                        <div style="background: #e3f2fd; padding: 20px; border-radius: 15px;">
+                            <h3 style="color: var(--azul-oscuro);">Recursos Propios</h3>
+                            <p style="font-size: 0.9rem;">Ahorros o fondos que ya posee el equipo emprendedor.</p>
+                        </div>
+                        <div style="background: #fff3e0; padding: 20px; border-radius: 15px;">
+                            <h3 style="color: var(--naranja);">Financiamiento Externo</h3>
+                            <p style="font-size: 0.9rem;">Préstamos bancarios, inversionistas o donaciones.</p>
+                        </div>
+                        <div style="background: #e8f5e9; padding: 20px; border-radius: 15px;">
+                            <h3 style="color: #2e7d32;">Fondos Públicos</h3>
+                            <p style="font-size: 0.9rem;">Convocatorias del gobierno o instituciones estatales.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. EXPLORACIÓN VISUAL: CABILDEO -->
+            <section class="slide">
+                <div class="content">
+                    <h2>3. El Arte del Cabildeo</h2>
+                    <p>El cabildeo es convencer a quienes deciden para que apoyen tu proyecto.</p>
+                    <div class="explorer-stage">
+                        <div class="explorer-nav">
+                            <button class="explorer-btn"
+                                onclick="explore('cab-1', '<b>Funciones:</b> Informar a los tomadores de decisión, argumentar a favor del proyecto y buscar alianzas estratégicas.')">Funciones</button>
+                            <button class="explorer-btn"
+                                onclick="explore('cab-2', '<b>Modalidad Directa:</b> Reuniones cara a cara con la autoridad, entrega de propuestas técnicas.')">Directo</button>
+                            <button class="explorer-btn"
+                                onclick="explore('cab-3', '<b>Modalidad Indirecta:</b> Uso de medios de comunicación o presión social para influir en la autoridad.')">Indirecto</button>
+                        </div>
+                        <div id="explorer-info-box" class="explorer-info">
+                            Haz clic en un botón para explorar las modalidades y funciones del cabildeo.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. ACTIVIDAD DE COMPRENSIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Pon a prueba tu conocimiento</h2>
+                    <p>Si tu proyecto requiere un monto pequeño pero muy urgente, ¿qué fuente buscarías primero?</p>
+                    <div class="options-container" id="q1-container">
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'Un préstamo bancario toma tiempo y genera intereses. Hay opciones más rápidas.', 'q1-feedback', 'q1-retry')">Un
+                            préstamo bancario a 5 años</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, true, '¡Correcto! Los recursos propios son los más accesibles y rápidos para necesidades pequeñas y urgentes.', 'q1-feedback', 'q1-retry')">Uso
+                            de ahorros o fondos propios</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'El cabildeo es para influir en leyes o grandes decisiones, no es una fuente de dinero directa.', 'q1-feedback', 'q1-retry')">Hacer
+                            cabildeo político</button>
+                    </div>
+                    <div id="q1-feedback" class="feedback-overlay"></div>
+                    <div class="retry-container" id="q1-retry">
+                        <button class="btn-retry"
+                            onclick="resetQuestion('q1-container', 'q1-feedback', 'q1-retry')">Intentar de
+                            nuevo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. JUEGO EDUCATIVO -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Desafío de Relación</h2>
+                    <p>Selecciona el concepto y luego su definición correspondiente.</p>
+                    <div class="match-game">
+                        <div class="column" id="col-concepts">
+                            <div class="match-item" data-match="1" onclick="handleMatch(this)">Cabildeo</div>
+                            <div class="match-item" data-match="2" onclick="handleMatch(this)">Priorización</div>
+                            <div class="match-item" data-match="3" onclick="handleMatch(this)">Viabilidad</div>
+                        </div>
+                        <div class="column" id="col-defs">
+                            <div class="match-item" data-match="2" onclick="handleMatch(this)">Orden de importancia
+                            </div>
+                            <div class="match-item" data-match="3" onclick="handleMatch(this)">Si se puede realizar
+                            </div>
+                            <div class="match-item" data-match="1" onclick="handleMatch(this)">Influir en decisiones
+                            </div>
+                        </div>
+                    </div>
+                    <div id="match-feedback" class="feedback-overlay"></div>
+                    <div style="margin-top: 20px;">
+                        <button class="btn-retry" onclick="resetMatchGame()">Reiniciar Juego</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. APLICACIÓN PRÁCTICA -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Situación Real</h2>
+                    <div class="meta-box" style="background: var(--dorado); color: var(--azul-oscuro);">
+                        <p><b>Caso:</b> Juan quiere construir un puente en su aldea. Ha reunido a los vecinos pero
+                            necesitan el permiso del Alcalde.</p>
+                        <p>¿Qué acción de <b>cabildeo</b> sería más efectiva?</p>
+                    </div>
+                    <div class="options-container" id="case-container" style="margin-top: 20px;">
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, true, '¡Excelente! Presentar datos técnicos y beneficios sociales es la base de un buen cabildeo.', 'case-feedback', 'case-retry')">Presentar
+                            al Alcalde un estudio de impacto y firmas de la comunidad.</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'Pedir un préstamo no soluciona el problema del permiso legal ni del apoyo institucional.', 'case-feedback', 'case-retry')">Pedir
+                            un préstamo al banco a nombre de los vecinos.</button>
+                    </div>
+                    <div id="case-feedback" class="feedback-overlay"></div>
+                    <div class="retry-container" id="case-retry">
+                        <button class="btn-retry"
+                            onclick="resetQuestion('case-container', 'case-feedback', 'case-retry')">Intentar de
+                            nuevo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. REPASO FINAL -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¡Repaso Relámpago!</h2>
+                    <div style="width: 100%; max-width: 600px; text-align: left;">
+                        <div style="margin-bottom: 20px;">
+                            <p>1. ¿El cabildeo es ilegal?</p>
+                            <button class="option-btn"
+                                onclick="this.innerHTML='❌ ¡No! Es una herramienta legítima de participación.'; this.style.borderColor='var(--rojo-ladrillo)'">Sí</button>
+                            <button class="option-btn"
+                                onclick="this.innerHTML='✅ ¡Exacto! Es una práctica democrática si se hace éticamente.'; this.style.borderColor='#4caf50'">No</button>
+                        </div>
+                        <div>
+                            <p>2. ¿Cuál es el primer paso para un proyecto?</p>
+                            <button class="option-btn"
+                                onclick="this.innerHTML='✅ ¡Correcto! Identificar la necesidad.'; this.style.borderColor='#4caf50'">Identificar
+                                necesidades</button>
+                            <button class="option-btn"
+                                onclick="this.innerHTML='❌ ¡No! Primero debes saber qué falta.'; this.style.borderColor='var(--rojo-ladrillo)'">Gastar
+                                dinero</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. METACOGNICIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Qué aprendimos hoy?</h2>
+                    <div class="meta-box">
+                        <p>Reflexiona sobre estas preguntas:</p>
+                        <ul style="list-style: none; margin-top: 20px;">
+                            <li style="margin-bottom: 15px;">🔍 ¿Por qué es importante priorizar antes de actuar?</li>
+                            <li style="margin-bottom: 15px;">🤝 ¿Cómo podrías usar el cabildeo para ayudar a otros?</li>
+                            <li>💼 ¿Cuál fuente de financiamiento te parece más segura?</li>
+                        </ul>
+                    </div>
+                    <p style="margin-top: 30px; font-style: italic; color: var(--naranja);">"La mejor forma de predecir
+                        el futuro es creándolo."</p>
+                </div>
+            </section>
+
+            <!-- 12. CIERRE -->
+            <section class="slide">
+                <div class="portada-content">
+                    <div style="font-size: 6rem;">⭐</div>
+                    <h1>¡Increíble Trabajo!</h1>
+                    <p>Has completado la Lección 3 sobre Identificación, Financiamiento y Cabildeo.</p>
+                    <p style="color: var(--naranja); font-weight: bold;">Estás un paso más cerca de hacer realidad tus
+                        proyectos.</p>
+                    <div style="margin-top: 40px; font-weight: bold; letter-spacing: 5px;">COLEGIO ESCOLARIS</div>
+                    <button class="option-btn" style="margin-top: 20px;" onclick="goToSlide(0)">Volver al
+                        Inicio</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

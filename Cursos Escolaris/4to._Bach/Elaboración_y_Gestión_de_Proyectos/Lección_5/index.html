@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: Los pasos del éxito - Colegio Escolaris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="presentation-container">
+        <div class="header-decor"></div>
+
+        <button id="prev-btn" class="nav-arrow" onclick="prevSlide()" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </button>
+        <button id="next-btn" class="nav-arrow" onclick="nextSlide()" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </button>
+
+        <div class="slides-wrapper">
+            <!-- 1. PORTADA -->
+            <section class="slide">
+                <div class="portada-content">
+                    <span class="materia">Elaboración y Gestión de Proyectos</span>
+                    <h1>Los pasos del éxito</h1>
+                    <p style="font-weight: bold; color: var(--azul-oscuro);">Guía para Proyectos Comunitarios</p>
+                    <div style="font-size: 8rem; margin: 30px 0;">🛤️</div>
+                    <p>Lección 5 • Bachillerato</p>
+                    <p>Hoy aprenderás la ruta exacta para transformar tu comunidad a través de pasos claros y efectivos.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2. OBJETIVOS -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Objetivos de Aprendizaje</h2>
+                    <ul class="objectives-list">
+                        <li><span>🤝</span> Definir qué es un Proyecto Comunitario.</li>
+                        <li><span>📋</span> Enumerar los pasos clave para realizarlo.</li>
+                        <li><span>✅</span> Describir las acciones necesarias en cada fase del proyecto.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. ACTIVACIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Cómo empezarías?</h2>
+                    <p>Si notas que en tu colonia hay demasiada basura en las calles, ¿qué sería lo primero que harías?
+                    </p>
+                    <div class="grid-cards">
+                        <div class="card"
+                            onclick="explore('act', '¡Espera! Si compras escobas sin saber quiénes pueden ayudar o dónde está el foco del problema, podrías fallar. Primero debemos <b>analizar</b>.')">
+                            <span class="icon">🧹</span>
+                            <h3>Comprar escobas</h3>
+                            <p>Empezar a limpiar de una vez.</p>
+                        </div>
+                        <div class="card"
+                            onclick="explore('act', '¡Exacto! El primer paso es entender la situación. A esto lo llamamos <b>Diagnóstico</b>.')">
+                            <span class="icon">📝</span>
+                            <h3>Analizar el porqué</h3>
+                            <p>Ver por qué se acumula la basura.</p>
+                        </div>
+                    </div>
+                    <div id="explorer-info-act" style="margin-top: 20px; font-style: italic;">Haz clic en una opción
+                        para reflexionar.</div>
+                </div>
+            </section>
+
+            <!-- 4. PALABRAS CLAVE -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Conceptos Vitales</h2>
+                    <div class="grid-cards">
+                        <div class="card no-hover">
+                            <span class="icon">🏘️</span>
+                            <h3>Comunidad</h3>
+                            <p>Grupo de personas que comparten intereses o lugar.</p>
+                        </div>
+                        <div class="card no-hover">
+                            <span class="icon">🩺</span>
+                            <h3>Diagnóstico</h3>
+                            <p>Identificar las necesidades reales antes de actuar.</p>
+                        </div>
+                        <div class="card no-hover">
+                            <span class="icon">🚀</span>
+                            <h3>Ejecución</h3>
+                            <p>Poner en marcha lo planificado en el papel.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONTENIDO: DEFINICIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿Qué es un Proyecto Comunitario?</h2>
+                    <p>Es un conjunto de actividades diseñadas para resolver un problema específico de un grupo humano
+                        (vecinos, estudiantes, etc.) buscando el <b>bien común</b>.</p>
+                    <div
+                        style="background: var(--dorado); padding: 30px; border-radius: 25px; color: var(--azul-oscuro); font-weight: bold;">
+                        "No es para beneficio de una sola persona, es para mejorar la vida de TODOS en la comunidad."
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CONTENIDO: LA RUTA (ENUMERACIÓN) -->
+            <section class="slide">
+                <div class="content">
+                    <h2>La Ruta del Éxito</h2>
+                    <p>Sigue estos 4 pasos fundamentales en orden:</p>
+                    <div
+                        style="display: flex; flex-direction: column; gap: 10px; text-align: left; width: 100%; max-width: 500px;">
+                        <div style="background: var(--naranja); color: white; padding: 15px; border-radius: 15px;">1.
+                            Diagnóstico Comunitario</div>
+                        <div
+                            style="background: var(--dorado); color: var(--azul-oscuro); padding: 15px; border-radius: 15px;">
+                            2. Planificación</div>
+                        <div style="background: var(--azul-oscuro); color: white; padding: 15px; border-radius: 15px;">
+                            3. Ejecución del Proyecto</div>
+                        <div
+                            style="background: var(--rojo-ladrillo); color: white; padding: 15px; border-radius: 15px;">
+                            4. Evaluación de Resultados</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. EXPLORACIÓN VISUAL: DESCRIPCIÓN DE PASOS -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿En qué consiste cada paso?</h2>
+                    <p>Haz clic en cada paso para descubrir sus acciones:</p>
+                    <div class="explorer-stage">
+                        <div class="explorer-nav">
+                            <button class="explorer-btn"
+                                onclick="explore('step-1', '<b>1. Diagnóstico:</b> Se observa la realidad, se escuchan a los vecinos y se prioriza el problema más urgente.')">Diagnóstico</button>
+                            <button class="explorer-btn"
+                                onclick="explore('step-2', '<b>2. Planificación:</b> Se definen objetivos, se buscan recursos y se crea un calendario de trabajo.')">Planificación</button>
+                            <button class="explorer-btn"
+                                onclick="explore('step-3', '<b>3. Ejecución:</b> ¡A trabajar! Se realizan las actividades según lo planeado.')">Ejecución</button>
+                            <button class="explorer-btn"
+                                onclick="explore('step-4', '<b>4. Evaluación:</b> Se analiza si se cumplió el objetivo y qué podemos mejorar para el futuro.')">Evaluación</button>
+                        </div>
+                        <div id="explorer-info-box" class="explorer-info">
+                            Toca un paso para ver el detalle.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. ACTIVIDAD DE COMPRENSIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>¿En qué fase estamos?</h2>
+                    <p>Si el equipo está haciendo una lista de cuánto dinero y cuántas personas necesitan, ¿en qué paso
+                        se encuentran?</p>
+                    <div class="options-container" id="q1-container">
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'El diagnóstico es para ver qué falta, no para pedir recursos específicos aún.', 'q1-feedback', 'q1-retry')">Diagnóstico</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, true, '¡Correcto! En la planificación es donde definimos qué recursos necesitamos antes de empezar.', 'q1-feedback', 'q1-retry')">Planificación</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'La ejecución es cuando ya estás usando esos recursos, no cuando los listas.', 'q1-feedback', 'q1-retry')">Ejecución</button>
+                    </div>
+                    <div id="q1-feedback" class="feedback-overlay"></div>
+                    <div class="retry-container" id="q1-retry">
+                        <button class="btn-retry"
+                            onclick="resetQuestion('q1-container', 'q1-feedback', 'q1-retry')">Intentar de
+                            nuevo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. JUEGO EDUCATIVO -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Relaciona el Paso con su Acción</h2>
+                    <p>Relaciona cada fase con lo que sucede en ella.</p>
+                    <div class="match-game">
+                        <div class="column" id="col-steps">
+                            <div class="match-item" data-match="EV" onclick="handleMatch(this)">Evaluación</div>
+                            <div class="match-item" data-match="DI" onclick="handleMatch(this)">Diagnóstico</div>
+                            <div class="match-item" data-match="EJ" onclick="handleMatch(this)">Ejecución</div>
+                        </div>
+                        <div class="column" id="col-actions">
+                            <div class="match-item" data-match="DI" onclick="handleMatch(this)">Ver el problema real
+                            </div>
+                            <div class="match-item" data-match="EJ" onclick="handleMatch(this)">Realizar la acción</div>
+                            <div class="match-item" data-match="EV" onclick="handleMatch(this)">Analizar los resultados
+                            </div>
+                        </div>
+                    </div>
+                    <div id="match-feedback" class="feedback-overlay"></div>
+                    <div style="margin-top: 20px;">
+                        <button class="btn-retry" onclick="resetMatchGame()">Reiniciar Juego</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. APLICACIÓN PRÁCTICA -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Situación de Impacto</h2>
+                    <div class="meta-box" style="background: var(--naranja); color: white;">
+                        <p><b>Caso:</b> Terminaron de pintar el parque, pero nadie anotó si las bancas quedaron bien o
+                            si los niños están felices.</p>
+                        <p>¿Qué paso olvidaron realizar?</p>
+                    </div>
+                    <div class="options-container" id="case-container" style="margin-top: 20px;">
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, true, '¡Exacto! Sin la evaluación, no sabemos si el éxito fue real o si debemos corregir algo.', 'case-feedback', 'case-retry')">La
+                            Evaluación Final</button>
+                        <button class="option-btn"
+                            onclick="checkAnswer(this, false, 'La ejecución ya se hizo (pintar), pero falta el paso de cierre.', 'case-feedback', 'case-retry')">La
+                            Ejecución</button>
+                    </div>
+                    <div id="case-feedback" class="feedback-overlay"></div>
+                    <div class="retry-container" id="case-retry">
+                        <button class="btn-retry"
+                            onclick="resetQuestion('case-container', 'case-feedback', 'case-retry')">Intentar de
+                            nuevo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11. METACOGNICIÓN -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Tu Reflexión</h2>
+                    <div class="meta-box">
+                        <p>Piensa en estas preguntas:</p>
+                        <ul style="list-style: none; margin-top: 20px;">
+                            <li style="margin-bottom: 15px;">🔍 ¿Por qué es peligroso saltarse el diagnóstico?</li>
+                            <li style="margin-bottom: 15px;">🏠 ¿Qué problema ves en tu comunidad que necesite un
+                                proyecto?</li>
+                            <li>🌟 ¿Qué aprendiste hoy sobre el trabajo en equipo?</li>
+                        </ul>
+                    </div>
+                    <p style="margin-top: 30px; font-style: italic; color: var(--naranja);">"La organización es la clave
+                        del progreso."</p>
+                </div>
+            </section>
+
+            <!-- 12. CIERRE -->
+            <section class="slide">
+                <div class="portada-content">
+                    <div style="font-size: 6rem;">🎖️</div>
+                    <h1>¡Meta Alcanzada!</h1>
+                    <p>Ahora conoces los pasos técnicos para transformar una idea en un proyecto comunitario exitoso.
+                    </p>
+                    <p style="color: var(--naranja); font-weight: bold;">¡Estás listo para liderar el cambio!</p>
+                    <div style="margin-top: 40px; font-weight: bold; letter-spacing: 5px;">COLEGIO ESCOLARIS</div>
+                    <button class="option-btn" style="margin-top: 20px;" onclick="goToSlide(0)">Volver al
+                        Inicio</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
